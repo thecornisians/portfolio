@@ -36,7 +36,7 @@ export default function Portfolio(){
                           <div className='basis-1/3 flex-1'>
                               <Image src={creativeConnect} className="rounded-lg max-w-full h-15 w-15" />
                               <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/Creatives-connect'>Github Repo</a></button>
+                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a></button>
                                 <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='#'>Live Site</a></button>
                               </div>
                           </div>
@@ -45,14 +45,14 @@ export default function Portfolio(){
                             <Image src={Nanaasomani} className="rounded-lg max-w-full h-15 w-15" />
                             <div className='flex gap-3 mt-2'>
                                 <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='#'>Github Repo</a></button>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://nanaasomani.com/' target='_blank'>Live Site</a></button>
+                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://nanaasomani.com/' target='_blank' rel="noreferrer">Live Site</a></button>
                               </div>
                           </div>
 
                           <div className='basis-1/3 flex-1'>
                             <Image src={Happynotes} className="rounded-lg max-w-full h-15 w-15" />
                             <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/happy-notes' target='_blank'>Github Repo</a></button>
+                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/happy-notes' target='_blank' rel="noreferrer">Github Repo</a></button>
                                 <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='#'>Live Site</a></button>
                               </div>
                           </div>
@@ -60,7 +60,7 @@ export default function Portfolio(){
                           <div className='basis-1/3 flex-1'>
                             <Image src={Drinks} className="rounded-lg max-w-full h-15 w-15" />
                             <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/cocktail-recipe'>Github Repo</a></button>
+                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/cocktail-recipe' target='_blank' rel="noreferrer">Github Repo</a></button>
                                 <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href=''>Live Site</a></button>
                               </div>
                           </div>
