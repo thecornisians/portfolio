@@ -20,7 +20,7 @@ export default function About(){
                           <p className="leading-7 ">I am a Full stack Software Engineer who loves building products that help make the world a little better. Skilled in solving problems with HTML, CSS, JavaScript, React, Node, Express, MongoDB etc. 
                           A firm believer in the "whole is greater than the sum of its parts" and hence focused on being a valuable member of any team I am on and helping the team rise together.
                           </p>
-                          <p className="leading-7">A lifelong learner with interests spanning different disciplines. We can have a chat about psychology, philosophy, Economics, Physics, etc. I write about my learnings in my weekly newsletter  <a href="https://cowans.substack.com" className="text-[#1DB67D]" target='_blank'>here</a></p>
+                          <p className="leading-7">A lifelong learner with interests spanning different disciplines. We can have a chat about psychology, philosophy, Economics, Physics, etc. I write about my learnings in my weekly newsletter  <a href="https://cowans.substack.com" rel="noreferrer" className="text-[#1DB67D]" target='_blank'>here</a></p>
                       </div>
 
                       <div className="w-1/2 sm:mt-20 ">
