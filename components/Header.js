@@ -30,7 +30,7 @@ export default function Header(){
                                 <Link href="/">Portfolio</Link>
                             </li>
                             <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                <a href="https://cowans.substack.com/" target='_blank'>Blog</a>
+                                <a href="https://cowans.substack.com/" target='_blank' rel="noreferrer">Blog</a>
                             </li>
                             <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
                                 <Link href="/contact">Contact</Link>

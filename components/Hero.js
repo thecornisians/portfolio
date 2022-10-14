@@ -16,9 +16,9 @@ export default function Hero(){
                         <a href="#portfolio" className="rounded-full my-5 bg-[#1DB67D] px-10 py-5 outline-none scroll-smooth hover:bg-cyan-200 bg-white-500 text-white">Explore Portfolio</a>
                     </div>
                     <div className='text-4xl flex justify-center gap-9 text-white mb-8 mt-6 lg:mt-8 mx-auto'>
-                        <a href="https://www.linkedin.com/in/corneliusoa/" target="_blank" className="hover:text-slate-600 hover:animate-spin"><FaLinkedin /></a>
-                        <a href="https://twitter.com/thecornisians" target="_blank" className="hover:text-slate-600 hover:animate-spin"><FaTwitterSquare/></a>
-                        <a href="https://github.com/thecornisians" target="_blank" className="hover:text-slate-600 hover:animate-spin">< FaGithubSquare /></a>
+                        <a href="https://www.linkedin.com/in/corneliusoa/" target="_blank" rel="noreferrer" className="hover:text-slate-600 hover:animate-spin"><FaLinkedin /></a>
+                        <a href="https://twitter.com/thecornisians" target="_blank" rel="noreferrer" className="hover:text-slate-600 hover:animate-spin"><FaTwitterSquare/></a>
+                        <a href="https://github.com/thecornisians" target="_blank" rel="noreferrer" className="hover:text-slate-600 hover:animate-spin">< FaGithubSquare /></a>
                     </div>
                    
           </div>
