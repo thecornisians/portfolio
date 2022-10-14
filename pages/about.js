@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image"
 import { FaTwitterSquare } from "react-icons/fa"
 import { FaGithubSquare } from "react-icons/fa"
-import cornelius from "../public/cornelius.jpg"
+import cornelius from "../public/cornelius.JPG"
 
 export default function About(){
     return(
