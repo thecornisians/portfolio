@@ -6,8 +6,6 @@ import contact from "../pages/contact";
 import about from "../pages/about";
 
 export default function Header(){
-    const [darkMode, setDarkMode] = useState(false)
-
     return (
         <div>
             <head>
