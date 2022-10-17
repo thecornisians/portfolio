@@ -6,31 +6,18 @@ import Drinks from '../public/drinks.gif'
 
 export default function Portfolio(){
     return (
-        <section id='portfolio' className='scroll-smooth'>
-
-              <div className="flex flex-wrap -mx-4 text-white">
-                <div className="w-full px-4">
-                  <div className="text-center mx-auto mb-[60px] max-w-[510px]">
-                    <span className="font-semibold text-lg text-primary mb-2 block">
-                      Portfolio
-                    </span>
-                    <h2
-                      className="
-                        font-bold
-                        text-3xl
-                        sm:text-4xl
-                        md:text-[40px]
-                        text-dark
-                        mb-4
-                      ">
+        <section id='portfolio' className='scroll-smooth p-5'>              
+                <div className="text-white text-center">
+                    <h3 className='font-semibold text-lg text-primary mb-2'> Portfolio</h3>
+                    <h4 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
                       Recent Projects
-                    </h2>
+                    </h4>
                     <p className="text-base text-body-color">
-                     Here are some of my most recent projects and freelance work
-                    </p>
-                  </div>
+                    Here are some of my most recent projects and freelance work
+                  </p>
+
                 </div>
-              </div>
+             
               <div>
                       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
                           <div className='basis-1/3 flex-1'>
@@ -69,11 +56,12 @@ export default function Portfolio(){
                 
               <span className="font-semibold text-lg text-primary mb-2 block text-white text-center">
                       Past Clients
-                    </span>
+              </span>
            
         </section>
     )
 }
+
 
 
 
