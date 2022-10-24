@@ -21,10 +21,9 @@ export default function Navbar(){
                 <nav className="px-2 sm:px-4 py-2.5 rounded">
                     <div className="container flex flex-wrap justify-between items-center mx-auto">
                         <Link href="/" className="flex items-center">
-                            <span className="self-center text-xl font-semibold text-[#1DB67D] cursor-pointer">Cornelius OA</span>
+                            <span className="self-center text-xl font-semibold text-[#1DB67D]">Cornelius OA</span>
                         </Link>
-                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"
-                        onClick={() => setNavbar(!navbar)}>
+                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         {navbar ? (
                                     <svg
