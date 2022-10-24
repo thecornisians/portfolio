@@ -23,7 +23,9 @@ export default function Navbar(){
                         <Link href="/" className="flex items-center">
                             <span className="self-center text-xl font-semibold text-[#1DB67D]">Cornelius OA</span>
                         </Link>
-                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"
+                        onClick={() => setNavbar(!navbar)}
+                        >
                         <span className="sr-only">Open main menu</span>
                         {navbar ? (
                                     <svg
@@ -58,7 +60,7 @@ export default function Navbar(){
 
                         <div className={`w-full md:block md:w-auto ${
                             navbar ? "block" : "hidden"}`} id="display-navigation">
-                            <ul className="flex flex-col p-4 mt-4  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                            <ul className="flex flex-col p-4 mt-4 text-center rounded-lg text-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium font-serif">
                                 <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
                                 <Link href="/about">About</Link>
                                 </li>
