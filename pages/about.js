@@ -26,7 +26,7 @@ export default function About(){
                       </div>
 
                       <div className=" sm:mt-20 ">
-                        <Image src={cornelius} className='max-w-100 sm:object-contain sm:h-48 sm:w-96' />
+                        <Image src={cornelius} className='max-w-100 sm:object-contain sm:h-48 sm:w-96' alt='cornelius owusu-ansah'/>
                       </div>
          
                     </div>
