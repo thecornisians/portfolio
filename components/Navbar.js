@@ -20,10 +20,12 @@ export default function Navbar(){
         <header className="bg-[#161C2D] border-5 border-white">
                 <nav className="px-2 sm:px-4 py-2.5 rounded">
                     <div className="container flex flex-wrap justify-between items-center mx-auto">
-                        <Link href="/" className="flex items-center">
-                            <span className="self-center text-xl font-semibold text-[#1DB67D]">Cornelius OA</span>
+                        <Link href="/" className="flex items-center cursor-pointer">
+                            <span className="self-center text-lg md:text-2xl font-semibold text-[#1DB67D] cursor-pointer">Cornelius OA</span>
                         </Link>
-                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                        <button data-collapse-toggle="navbar-default" type="button" id="display-navigation" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"
+                        onClick={() => setNavbar(!navbar)}
+                        >
                         <span className="sr-only">Open main menu</span>
                         {navbar ? (
                                     <svg
@@ -58,18 +60,18 @@ export default function Navbar(){
 
                         <div className={`w-full md:block md:w-auto ${
                             navbar ? "block" : "hidden"}`} id="display-navigation">
-                            <ul className="flex flex-col p-4 mt-4  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                            <ul className="flex flex-col p-4 mt-4 text-center uppercase rounded-lg text-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                                 <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                <Link href="/about">About</Link>
+                                <Link href="/about">ABOUT</Link>
                                 </li>
                                 <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                    <Link href="/">Portfolio</Link>
+                                    <Link href="/">PORTFOLIO</Link>
                                 </li>
                                 <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                <a href="https://cowans.substack.com/" target='_blank' rel="noreferrer">Blog</a>
+                                <a href="https://cowans.substack.com/" target='_blank' rel="noreferrer">BLOG</a>
                                 </li>
                                 <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                    <Link href="/contact">Contact</Link>
+                                    <Link href="/contact">CONTACT</Link>
                                 </li>
                             </ul>
                         </div>
