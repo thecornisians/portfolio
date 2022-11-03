@@ -3,11 +3,15 @@ import Head from 'next/head'
 import { useState } from "react";
 import contact from "../pages/contact";
 import about from "../pages/about";
-import { FaBars, FaTimes} from "react-icons/fa"
+import portfolio from  '../pages/portfolio'
+import { FaBars, FaTimes, FaRegMoon} from "react-icons/fa"
+import { MdOutlineLightMode,MdOutlineDarkMode } from "react-icons/md"
 
 export default function Navbar(){
     const [navbar, setNavbar] = useState(false);
-    
+    const[ darkMode, setDarkMode] = useState(false)
+
+   
     return (
         <div>
             <Head>
@@ -16,8 +20,8 @@ export default function Navbar(){
                 <link rel="icon" href="/favicon.png" />
             </Head>
 
-            
-        <header className="bg-[#161C2D] border-5 border-white">
+            {/* bg-[#161C2D] */}
+        <header className="bg-black border-5 border-white">
                 <nav className="px-2 sm:px-4 py-2.5 rounded">
                     <div className="container flex flex-wrap justify-between items-center mx-auto">
                         <Link href="/" className="flex items-center cursor-pointer">
@@ -60,19 +64,17 @@ export default function Navbar(){
 
                         <div className={`w-full md:block md:w-auto ${
                             navbar ? "block" : "hidden"}`} id="display-navigation">
-                            <ul className="flex flex-col p-4 mt-4 text-center uppercase rounded-lg text-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                                <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                <Link href="/about">ABOUT</Link>
+                            <ul className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${darkMode ? 'text-black' : 'text-white'} `}>
+                                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                                    <Link href="/portfolio">Portfolio</Link>
                                 </li>
-                                <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                    <Link href="/">PORTFOLIO</Link>
+                                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                                <a href="https://cowans.substack.com/" target='_blank' rel="noreferrer">Blog</a>
                                 </li>
-                                <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                <a href="https://cowans.substack.com/" target='_blank' rel="noreferrer">BLOG</a>
+                                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                                    <Link href="/contact">Contact</Link>
                                 </li>
-                                <li className="text-white hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
-                                    <Link href="/contact">CONTACT</Link>
-                                </li>
+                                {/* <li onClick={() => setDarkMode(!darkMode)} className="flex text-lg dark:hover:bg-[#424242]"> <MdOutlineDarkMode className="text-center"/></li> */}
                             </ul>
                         </div>
                     </div>

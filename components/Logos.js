@@ -6,7 +6,7 @@ import Asomani from '../public/nanaasomani.png'
 export default function Logos(){
     return(
    
-    <div className="relative flex overflow-x-hidden text-white">
+    <div className="relative flex overflow-x-hidden text-white sm:hidden md:block bg-black">
         <div className="py-12 animate-marquee ">
           <span className="text-4xl mx-4 hover:text-gray-400 "><a href="http://thechillgh.com/" target="_blank" rel="noreferrer">ChillRiver Resort</a></span>
           <span className="text-4xl mx-4 text-[#1DB67D] "><a href="https://nanaasomani.com/" target="_blank" rel="noreferrer">Nana Asomani</a></span>
