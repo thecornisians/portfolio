@@ -3,6 +3,7 @@ import Image from "next/image"
 import creativeConnect from '../public/creativesConnect.gif'
 import Nanaasomani from '../public/nanaasomani.gif'
 import Drinks from '../public/drinks.gif'
+import creativeconnect from '../public/creativeconnect.png'
 
 export default function Portfolio(){
     return (
@@ -23,32 +24,32 @@ export default function Portfolio(){
                           <div className='basis-1/3 flex-1'>
                               <Image src={creativeConnect} className="rounded-lg max-w-full h-8 w-8" alt='creative-connect' />
                               <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a></button>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://creativeconnect.cyclic.app/' target='_blank' rel="noreferrer">Live Site</a></button>
+                                <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a>
+                                <a  className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='https://creativeconnect.cyclic.app/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
 
                           <div className='basis-1/3 flex-1'>
                             <Image src={Nanaasomani} className="rounded-lg max-w-full h-8 w-8" alt='nanaasomani' />
                             <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='#'>Github Repo</a></button>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://nanaasomani.com/' target='_blank' rel="noreferrer">Live Site</a></button>
+                                <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='#'>Github Repo</a>
+                                <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='https://nanaasomani.com/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
 
                           <div className='basis-1/3 flex-1'>
                             <Image src={Happynotes} className="rounded-lg max-w-full h-8 w-8" alt='happynotes'/>
                             <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/happy-notes' target='_blank' rel="noreferrer">Github Repo</a></button>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='#'>Live Site</a></button>
+                               <a  className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='https://github.com/thecornisians/happy-notes' target='_blank' rel="noreferrer">Github Repo</a>
+                              <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='#'>Live Site</a>
                               </div>
                           </div>
                           
                           <div className='basis-1/3 flex-1'>
                             <Image src={Drinks} className="rounded-lg max-w-full h-8 w-8" alt='drinks' />
                             <div className='flex gap-3 mt-2'>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href='https://github.com/thecornisians/cocktail-recipe' target='_blank' rel="noreferrer">Github Repo</a></button>
-                                <button className="px-5 py-3 text-white rounded-md bg-gray-800 hover:bg-gray-400"> <a href=''>Live Site</a></button>
+                               <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href='https://github.com/thecornisians/cocktail-recipe' target='_blank' rel="noreferrer">Github Repo</a>
+                              <a className="px-2 py-2 text-white rounded-md bg-gray-800 hover:bg-gray-400" href=''>Live Site</a>
                               </div>
                           </div>
                       </div>

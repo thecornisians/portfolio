@@ -11,7 +11,7 @@ import FaReact from 'react-icons/fa'
 export default function Stack (){
     return (
         <div >
-            <FaHtml5 />
+            <FaHtml5 alt='Html' />
             <FaCss3Alt />
             <SiJavascript />
             <SiMongodb />
