@@ -21,7 +21,7 @@ export default function Portfolio(){
              
               <div>
                       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-                          <div className='flex-1'>
+                          <div className='flex-1 mb-2'>
                               <Image src={creativeconnect} className="rounded-lg max-w-full h-8 w-8" alt='creative-connect' />
                               <p className='text-sm mt-1 mb-1 md:text-md'>Full stack application with authentication built with Node, express, MongoDB and EJS.</p>
                               <div className='flex gap-3 mt-2'>
@@ -30,7 +30,7 @@ export default function Portfolio(){
                               </div>
                           </div>
 
-                          <div className='flex-1'>
+                          <div className='flex-1 mb-2'>
                             <Image src={Nanaasomani} className="rounded-lg max-w-full h-8 w-8" alt='nanaasomani' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Portfolio website for client built with HTML, CSS, Javascript.</p>
                             <div className='flex gap-3 mt-2'>
@@ -39,7 +39,7 @@ export default function Portfolio(){
                               </div>
                           </div>
 
-                          <div className='flex-1'>
+                          <div className='flex-1 mb-2'>
                             <Image src={Happynotes} className="rounded-lg max-w-full h-8 w-8" alt='happynotes'/>
                             <p className='text-sm mt-1 mb-1 md:text-md'>Full stack to-do application build with Node, express, MongoDB and bootstrap for styling.</p>
                             <div className='flex gap-3 mt-2'>
