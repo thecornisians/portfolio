@@ -24,16 +24,16 @@ export default function AllProjects(){
              
               <div>
                       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                               <Image src={creativeconnect} className="rounded-lg max-w-full h-8 w-8" alt='creative-connect' />
                               <p className='text-sm mt-1 mb-1 md:text-md'>Full stack application with authentication built with Node, express, MongoDB and EJS.</p>
                               <div className='flex gap-3 mt-2'>
-                                <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a>
+                                <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a>
                                 <a  className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://creativeconnect.cyclic.app/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
 
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                             <Image src={Nanaasomani} className="rounded-lg max-w-full h-8 w-8" alt='nanaasomani' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Portfolio website for client built with HTML, CSS, Javascript.</p>
                             <div className='flex gap-3 mt-2'>
@@ -42,7 +42,7 @@ export default function AllProjects(){
                               </div>
                           </div>
 
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                               <Image src={chillgh} className="rounded-lg max-w-full h-8 w-8" alt='Chill River Resort' />
                               <p className='text-sm mt-1 mb-1 md:text-md'>Website built for the Chill River Resort.</p>
                               <div className='flex gap-3 mt-2'>
@@ -50,7 +50,7 @@ export default function AllProjects(){
                                 <a  className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://thechillgh.com/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                               <Image src={shopamargaret} className="rounded-lg max-w-full h-8 w-8" alt='amargaretgh' />
                               <p className='text-sm mt-1 mb-1 md:text-md'>Ecommerce website built for Amargaretgh.</p>
                               <div className='flex gap-3 mt-2'>
@@ -59,7 +59,7 @@ export default function AllProjects(){
                               </div>
                           </div>
 
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                             <Image src={Happynotes} className="rounded-lg max-w-full h-8 w-8" alt='happynotes'/>
                             <p className='text-sm mt-1 mb-1 md:text-md'>Full stack to-do application build with Node, express, MongoDB and bootstrap for styling.</p>
                             <div className='flex gap-3 mt-2'>
@@ -68,7 +68,7 @@ export default function AllProjects(){
                               </div>
                           </div>
                           
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                             <Image src={cornelius} className="rounded-lg max-w-full h-8 w-8" alt='cornelius owusu-ansah' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Portfolio site built with React/NextJS and Tailwind CSS</p>
                             <div className='flex gap-3 mt-2'>
@@ -77,7 +77,7 @@ export default function AllProjects(){
                               </div>
                           </div>
 
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                             <Image src={larryjay} className="rounded-lg max-w-full h-8 w-8" alt='larry jay Ghana' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Ecommerce fashion website built for Larry Jay Ghana</p>
                             <div className='flex gap-3 mt-2'>
@@ -86,7 +86,7 @@ export default function AllProjects(){
                               </div>
                           </div>
 
-                          <div className='basis-1/3 flex-1'>
+                          <div className='basis-1/3 flex-1 mb-3'>
                             <Image src={haleoptions} className="rounded-lg max-w-full h-8 w-8" alt='haleoptions' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Website built with Html, Bootstrap, Javascript</p>
                             <div className='flex gap-3 mt-2'>
