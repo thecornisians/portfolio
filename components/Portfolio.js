@@ -25,8 +25,8 @@ export default function Portfolio(){
                               <Image src={creativeconnect} className="rounded-lg max-w-full h-8 w-8" alt='creative-connect' />
                               <p className='text-sm mt-1 mb-1 md:text-md'>Full stack application with authentication built with Node, express, MongoDB and EJS.</p>
                               <div className='flex gap-3 mt-2'>
-                                <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a>
-                                <a  className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://creativeconnect.cyclic.app/' target='_blank' rel="noreferrer">Live Site</a>
+                                <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/Creatives-connect' target='_blank' rel="noreferrer">Github Repo</a>
+                                <a  className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://creativeconnect.cyclic.app/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
 
@@ -34,8 +34,8 @@ export default function Portfolio(){
                             <Image src={Nanaasomani} className="rounded-lg max-w-full h-8 w-8" alt='nanaasomani' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Portfolio website for client built with HTML, CSS, Javascript.</p>
                             <div className='flex gap-3 mt-2'>
-                                <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='#'>Github Repo</a>
-                                <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://nanaasomani.com/' target='_blank' rel="noreferrer">Live Site</a>
+                                <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='#'>Github Repo</a>
+                                <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://nanaasomani.com/' target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
 
@@ -43,8 +43,8 @@ export default function Portfolio(){
                             <Image src={Happynotes} className="rounded-lg max-w-full h-8 w-8" alt='happynotes'/>
                             <p className='text-sm mt-1 mb-1 md:text-md'>Full stack to-do application build with Node, express, MongoDB and bootstrap for styling.</p>
                             <div className='flex gap-3 mt-2'>
-                               <a  className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/happy-notes' target='_blank' rel="noreferrer">Github Repo</a>
-                              <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='#'>Live Site</a>
+                               <a  className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/happy-notes' target='_blank' rel="noreferrer">Github Repo</a>
+                              <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='#'>Live Site</a>
                               </div>
                           </div>
                           
@@ -52,8 +52,8 @@ export default function Portfolio(){
                             <Image src={cornelius} className="rounded-lg max-w-full h-8 w-8" alt='cornelius owusu-ansah' />
                             <p className='text-sm mt-1 mb-1 md:text-md'>Portfolio site built with React/NextJS and Tailwind CSS</p>
                             <div className='flex gap-3 mt-2'>
-                               <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/cocktail-recipe' target='_blank' rel="noreferrer">Github Repo</a>
-                              <a className="px-1.5 py-1.5 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://corneliusowans.netlify.com/'target='_blank' rel="noreferrer">Live Site</a>
+                               <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://github.com/thecornisians/cocktail-recipe' target='_blank' rel="noreferrer">Github Repo</a>
+                              <a className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm" href='https://corneliusowans.netlify.com/'target='_blank' rel="noreferrer">Live Site</a>
                               </div>
                           </div>
                       </div>
