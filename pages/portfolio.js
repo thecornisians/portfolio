@@ -1,14 +1,15 @@
 import Portfolio from "../components/Portfolio";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Projects from "../components/Projects";
+import AllProjects from "../components/AllProjects";
+
 
 export default function portfolioPage(){
     return (
         <section className="bg-gray-200">
             <Navbar />
-            <Portfolio className="min-h-full"/>
-            {/* <Projects /> */}
+            <AllProjects className="min-h-full"/>
+
             <Footer />
         </section>
     )

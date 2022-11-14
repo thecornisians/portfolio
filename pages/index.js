@@ -7,6 +7,7 @@ import Logos from '../components/Logos';
 import Footer from '../components/Footer';
 import About from '../components/About'
 import Form from '../components/Form';
+import BlogPosts from '../components/Blog';
 import { useState } from 'react';
 
 
@@ -21,7 +22,8 @@ export default function Home({ portfolioImage }) {
           <Hero />
           <About />
           <Portfolio />
-          <Logos />
+          {/* <Logos /> */}
+          <BlogPosts />
           <Form />
           
         <Footer />
