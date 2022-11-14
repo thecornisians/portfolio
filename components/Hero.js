@@ -24,10 +24,6 @@ export default function Hero(){
             </div>
 
 
-            {/* <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96'>
-                <Image src={Hi} layout="fill" objectFit='cover' className="m-auto "  alt="cornelius-owusu-ansah"/>
-            </div> */}
-
             <a className="flex justify-center mt-6 mb-10" href="#about"><FaArrowCircleDown className="text-center text-5xl animate-bounce"/></a>
         </section>
 
