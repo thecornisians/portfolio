@@ -16,8 +16,7 @@ export default function Home({ portfolioImage }) {
   const[ darkMode, setDarkMode] = useState(false)
 
   return (
-    // bg-[#161C2D]
-      <div>
+      <section>
           <Navbar />
           <Hero />
           <About />
@@ -28,7 +27,7 @@ export default function Home({ portfolioImage }) {
           
         <Footer />
     
-      </div>
+      </section>
 
   )
 }

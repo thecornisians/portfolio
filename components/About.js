@@ -10,10 +10,10 @@ import { SiPostman,SiMongodb,SiExpress } from "react-icons/si";
 export default function About(){
     return( 
         // bg-[#2B69B3]
-                <section className='p-4 smooth-scroll bg-[#ebf1f8] mb-5' id="about">
+                <section className='p-4 smooth-scroll bg-[#ebf1f8] mb-5'  id="about">
                     <div className="lg:flex lg:flex-row-reverse align-center justify-center scroll-smooth sm:gap-10 ">
                       {/* flex flex-col-reverse md:gap-6 align-center justify-center scroll-smooth sm:gap-10 */}
-                      <div className='mx-auto my-auto rounded-full w-96 h-96 mt-20 mb-20 overflow-hidden md:h-96 md:w-96'>
+                      <div className='mx-auto my-auto rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96'>
                              <Image src={cornelius}  alt="cornelius-owusu-ansah"/>
                         </div>
                         
