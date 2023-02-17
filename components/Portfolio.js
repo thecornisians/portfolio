@@ -90,7 +90,7 @@ export default function Portfolio() {
               alt="happynotes"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
-              Full stack to-do application built with Node, express, MongoDB and
+              Full stack to-do application build with Node, express, MongoDB and
               bootstrap for styling.
             </p>
             <div className="flex gap-3 mt-2">
@@ -104,9 +104,7 @@ export default function Portfolio() {
               </a>
               <a
                 className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-                href="https://happynotes.cyclic.app/"
-                target="_blank"
-                rel="noreferrer"
+                href="#"
               >
                 Live Site
               </a>
