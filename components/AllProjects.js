@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Happynotes from "../public/happynotes.gif";
 import Image from "next/image";
+import Happynotes from "../public/happynotes.gif";
 import creativeConnect from "../public/creativesConnect.gif";
 import chillgh from "../public/chillresort.png";
 import shopamargaret from "../public/shopamargaret.png";
