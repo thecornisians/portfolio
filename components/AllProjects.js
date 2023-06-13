@@ -27,7 +27,7 @@ export default function AllProjects() {
 
       <div>
         <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={creativeconnect}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg "
@@ -57,7 +57,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={Nanaasomani}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -83,7 +83,7 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={Happynotes}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -113,7 +113,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={cornelius}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -142,7 +142,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={chillgh}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -170,7 +170,7 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={shopamargaret}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -199,7 +199,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={alwoman}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -227,7 +227,7 @@ export default function AllProjects() {
               </a>
             </div>
           </div>
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={nurtureholiks}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -256,7 +256,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={larryjay}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
@@ -285,7 +285,7 @@ export default function AllProjects() {
             </div>
           </div>
 
-          <div className="basis-1/3 flex-1 mb-3 object-contain md:hover:scale-105 transition duration-300 ease-in-out">
+          <div className="basis-1/3 flex-1 mb-3">
             <Image
               src={haleoptions}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg"
