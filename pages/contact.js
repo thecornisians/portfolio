@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
-    <main className=" dark:bg-gray-900 scroll-smooth">
+    <main className=" bg-black scroll-smooth">
       <section className="min-h-screen">
         <Navbar />
         <Form />

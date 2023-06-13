@@ -13,7 +13,7 @@ export default function BlogPosts() {
       </div>
 
       <div className="mt-5 px-5 pb-4">
-        <div className="mb-7 shadow-md p-4">
+        <div className="mb-7 shadow-lg p-4 ">
           <h1 className="font-bold text-2xl pb-3">
             A simple introduction to the MVC Architechture
           </h1>
@@ -33,7 +33,7 @@ export default function BlogPosts() {
           </a>
         </div>
 
-        <div className="mb-7 shadow-md p-6">
+        <div className="mb-7 shadow-lg p-6">
           <h1 className="font-bold text-2xl pb-3">
             The Fear of starting anything in life
           </h1>

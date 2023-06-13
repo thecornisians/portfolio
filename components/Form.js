@@ -2,10 +2,10 @@ export default function Form() {
   return (
     <section>
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-black dark:text-white">
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white">
           Contact
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+        <p className="mb-6 lg:mb-16 font-light text-center text-white dark:text-gray-400 sm:text-xl">
           Want to talk about a new project you have or have a question ? Drop me
           a message below and I will get back to you as soon as possible.
         </p>

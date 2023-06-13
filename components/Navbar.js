@@ -76,7 +76,7 @@ export default function Navbar() {
               id="display-navigation"
             >
               <ul
-                className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${
+                className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg uppercase md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${
                   darkMode ? "text-black" : "text-white"
                 } `}
               >

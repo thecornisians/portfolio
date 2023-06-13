@@ -29,7 +29,7 @@ export default function Portfolio() {
           <div className="flex-1 mb-2">
             <Image
               src={creativeconnect}
-              className="rounded-lg max-w-full h-8 w-8"
+              className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="creative-connect"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
@@ -59,7 +59,7 @@ export default function Portfolio() {
           <div className="flex-1 mb-2">
             <Image
               src={Nanaasomani}
-              className="rounded-lg max-w-full h-8 w-8"
+              className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="nanaasomani"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
@@ -86,7 +86,7 @@ export default function Portfolio() {
           <div className="flex-1 mb-2">
             <Image
               src={Happynotes}
-              className="rounded-lg max-w-full h-8 w-8"
+              className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="happynotes"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
@@ -116,7 +116,7 @@ export default function Portfolio() {
           <div className="flex-1">
             <Image
               src={cornelius}
-              className="rounded-lg max-w-full h-8 w-8"
+              className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="cornelius owusu-ansah"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
