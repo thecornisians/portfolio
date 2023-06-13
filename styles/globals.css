@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,17 +15,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
 }
 
 body,
-html{
-  font-family: 'Inter', sans-serif;
+html {
+  font-family: "Inter", sans-serif;
 }
 
-
-
-
-
-
-
+p {
+  font-family: sans-serif;
+  font-weight: 500;
+}

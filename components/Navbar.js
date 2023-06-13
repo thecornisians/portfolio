@@ -21,7 +21,7 @@ export default function Navbar() {
 
       {/* bg-[#161C2D] */}
       <header className="bg-black border-5 border-white">
-        <nav className="px-2 sm:px-4 py-2.5 rounded">
+        <nav className="px-2 sm:px-4 py-2.5 rounded ">
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link href="/" className="flex items-center cursor-pointer">
               <span className="self-center text-lg md:text-2xl font-semibold text-[#1DB67D] cursor-pointer">

@@ -4,7 +4,7 @@ import Happynotes from "../public/happynotes.gif";
 import Image from "next/image";
 import creativeConnect from "../public/creativesConnect.gif";
 import Nanaasomani from "../public/nanaasomani.png";
-import cornelius from "../public/corneliusportfolio.png";
+import cornelius from "../public/wbgroup.png";
 import creativeconnect from "../public/creativeconnect.png";
 
 export default function Portfolio() {
@@ -120,12 +120,12 @@ export default function Portfolio() {
               alt="cornelius owusu-ansah"
             />
             <p className="text-sm mt-1 mb-1 md:text-md">
-              Portfolio site built with React/NextJS and Tailwind CSS
+              Client site built with React/NextJS and Tailwind CSS
             </p>
             <div className="flex gap-3 mt-2">
               <a
                 className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-                href="https://github.com/thecornisians/portfolio"
+                href="https://github.com/thecornisians/wb-group"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -133,7 +133,7 @@ export default function Portfolio() {
               </a>
               <a
                 className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-                href="https://corneliusowans.netlify.com/"
+                href="https://wbgrouprepresents.com"
                 target="_blank"
                 rel="noreferrer"
               >
