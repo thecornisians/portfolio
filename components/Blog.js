@@ -17,7 +17,7 @@ export default function BlogPosts() {
           <h1 className="font-bold text-2xl pb-3">
             A simple introduction to the MVC Architechture
           </h1>
-          <p className="pb-3">
+          <p className="pb-3 text-lg">
             The model-view controller is a way of implementing software design
             by diving it into components.In other words, it is a way of building
             software where you break down/separate the application into 3
@@ -37,7 +37,7 @@ export default function BlogPosts() {
           <h1 className="font-bold text-2xl pb-3">
             The Fear of starting anything in life
           </h1>
-          <p className="pb-3">
+          <p className="pb-3 text-lg">
             Most people have the desire to do great things in life however not
             everyone acts on this desire. One reason for this is our fear of
             making something lame. We are held back by the fear of our work not

@@ -21,9 +21,8 @@ export default function Hero() {
               </span>
               .
             </h2>
-            <p className="text-m py-5 leading-8  md:text-2xl max-w-xl mx-auto mb-6 lg:mb-8 font-serif">
-              I am a Full-stack Software Engineer currently based in Accra,
-              Ghana.
+            <p className="text-lg py-5 leading-8  md:text-2xl max-w-xl mx-auto mb-6 lg:mb-8">
+              Full-stack Software Engineer.
             </p>
             <a
               href="#portfolio"

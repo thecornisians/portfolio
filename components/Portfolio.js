@@ -104,7 +104,7 @@ export default function Portfolio() {
               </a>
               <a
                 className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-                href="https://happynotes.cyclic.app/"
+                href="https://happynotes.cyclic.app/login"
                 target="_blank"
                 rel="noreferrer"
               >
