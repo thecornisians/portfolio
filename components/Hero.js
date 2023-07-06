@@ -14,7 +14,7 @@ export default function Hero() {
       <section className={`min-h-full`}>
         <div className="text-center px-6 md:px-5 py-5 md:pt-28 lg:pt-28 mb-5">
           <div className="mb-8">
-            <h2 className="text-5xl md:text-7xl mb-6 font-serif p-4">
+            <h2 className="text-5xl md:text-7xl font-serif p-4">
               Hello, my name is{" "}
               <span className="text-[#1DB67D] animate-pulse hover:animate-bounce">
                 Cornelius
