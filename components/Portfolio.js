@@ -15,7 +15,7 @@ export default function Portfolio() {
         <h4 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
           Recent Projects
         </h4>
-        <p className="text-base text-body-color">
+        <p className="text-base text-body-color source-sans">
           Here are some of my most recent projects and freelance work. View all
           projects
           <Link href="/portfolio">
@@ -25,14 +25,14 @@ export default function Portfolio() {
       </div>
 
       <div>
-        <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+        <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap source-sans">
           <div className="flex-1 mb-2">
             <Image
               src={creativeconnect}
               className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="creative-connect"
             />
-            <p className="text-sm mt-1 mb-1 md:text-md">
+            <p className="text-sm mt-1 mb-1 md:text-md source-sans">
               Full stack application with authentication built with Node,
               express, MongoDB and EJS.
             </p>
@@ -62,7 +62,7 @@ export default function Portfolio() {
               className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="nanaasomani"
             />
-            <p className="text-sm mt-1 mb-1 md:text-md">
+            <p className="text-sm mt-1 mb-1 md:text-md source-sans">
               Portfolio website for client built with HTML, CSS, Javascript.
             </p>
             <div className="flex gap-3 mt-2">
@@ -89,7 +89,7 @@ export default function Portfolio() {
               className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="happynotes"
             />
-            <p className="text-sm mt-1 mb-1 md:text-md">
+            <p className="text-sm mt-1 mb-1 md:text-md source-sans">
               Full stack to-do application built with Node, express, MongoDB and
               bootstrap for styling.
             </p>
@@ -119,7 +119,7 @@ export default function Portfolio() {
               className="rounded-lg max-w-full h-8 w-8 shadow-lg object-contain md:hover:scale-105 transition duration-300 ease-in-out"
               alt="cornelius owusu-ansah"
             />
-            <p className="text-sm mt-1 mb-1 md:text-md">
+            <p className="text-sm mt-1 mb-1 md:text-md source-sans">
               Client site built with React/NextJS and Tailwind CSS
             </p>
             <div className="flex gap-3 mt-2">

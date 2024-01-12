@@ -24,7 +24,7 @@ export default function Navbar() {
         <nav className="px-2 sm:px-4 py-2.5 rounded ">
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link href="/" className="flex items-center cursor-pointer">
-              <span className="self-center text-lg md:text-2xl font-semibold text-[#1DB67D] cursor-pointer">
+              <span className="self-center text-lg md:text-2xl source-sans font-semibold text-[#1DB67D] cursor-pointer">
                 Cornelius OA
               </span>
             </Link>
@@ -76,14 +76,14 @@ export default function Navbar() {
               id="display-navigation"
             >
               <ul
-                className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg uppercase md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${
+                className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg source-sans font-semibold md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${
                   darkMode ? "text-black" : "text-white"
                 } `}
               >
-                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
                   <Link href="/portfolio">Portfolio</Link>
                 </li>
-                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
                   <a
                     href="https://cowans.substack.com/"
                     target="_blank"
@@ -92,7 +92,7 @@ export default function Navbar() {
                     Blog
                   </a>
                 </li>
-                <li className="hover:bg-gray-300 dark:hover:bg-[#424242] py-0.5 px-2 rounded text-base">
+                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
                   <Link href="/contact">Contact</Link>
                 </li>
                 {/* <li onClick={() => setDarkMode(!darkMode)} className="flex text-lg dark:hover:bg-[#424242]"> <MdOutlineDarkMode className="text-center"/></li> */}
