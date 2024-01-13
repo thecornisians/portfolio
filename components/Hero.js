@@ -26,7 +26,7 @@ export default function Hero() {
             </p>
             <a
               href="#portfolio"
-              className="rounded-full my-5 bg-[#1DB67D] px-10 py-5 outline-none scroll-smooth hover:bg-cyan-200 bg-white-500 font-serif mb-6"
+              className="rounded-full my-5 bg-[#1DB67D] px-10 py-5 outline-none scroll-smooth hover:bg-cyan-200 bg-white-500 font-serif mb-6 source-sans"
             >
               Explore Portfolio
             </a>
