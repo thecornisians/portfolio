@@ -32,6 +32,7 @@ export default function AllProjects() {
                   <a
                     href={githubLink}
                     target="_blank"
+                    rel="noreferrer"
                     className="bg-black text-white source-sans py-1 px-4 rounded inline-flex "
                   >
                     Github
@@ -40,6 +41,7 @@ export default function AllProjects() {
                   <a
                     href={liveLink}
                     target="_blank"
+                    rel="noreferrer"
                     className="bg-black text-white source-sans py-1 px-4 rounded inline-flex "
                   >
                     Live Site
