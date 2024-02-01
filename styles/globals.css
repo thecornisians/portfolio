@@ -32,3 +32,8 @@ p {
 .source-sans {
   font-family: "Source Sans 3", sans-serif;
 }
+
+.image {
+  max-width: 100%;
+  width: 100%;
+}
