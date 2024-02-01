@@ -22,7 +22,7 @@ export default function AllProjects() {
                 <Image
                   src={image}
                   width={400}
-                  height={250}
+                  height={220}
                   className="rounded-lg image shadow-lg"
                   alt="creative-connect"
                 />
