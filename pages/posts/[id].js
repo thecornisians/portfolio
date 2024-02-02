@@ -10,7 +10,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <Navbar />
-      <section className="p-5 md:p-8">
+      <section className="p-5 md:px-[5rem]">
         <h4 className="text-4xl mb-2 source-sans font-extrabold text-center lg:text-center">
           {postData.title} <br />
         </h4>
@@ -18,7 +18,10 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </span>
 
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className="md:text-lg"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </section>
     </div>
   );

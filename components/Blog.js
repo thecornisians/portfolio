@@ -3,7 +3,6 @@ export default function BlogPosts() {
   return (
     <section>
       <div className="text-center mb-10 md:mt-10 ">
-        {/* <h3 className='font-semibold text-lg text-primary mb-2'> Portfolio</h3> */}
         <h4 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
           Blog Posts
         </h4>
@@ -13,7 +12,7 @@ export default function BlogPosts() {
       </div>
 
       <div className="mt-5 px-5 pb-4">
-        <div className="mb-7 shadow-lg p-4 border border-gray-400 rounded-md">
+        <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-gray-900 rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">
             A simple introduction to the MVC Architechture
           </h1>
@@ -33,7 +32,7 @@ export default function BlogPosts() {
           </a>
         </div>
 
-        <div className="mb-7 shadow-lg p-6 border border-gray-400 rounded-md">
+        <div className="mb-7 shadow-lg p-6 border border-gray-400 bg-gray-900 rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">
             The Fear of starting anything in life
           </h1>

@@ -81,7 +81,7 @@ export default function Navbar() {
                 } `}
               >
                 <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <Link href="/blog">Blog</Link>
+                  <Link href="/blog">Blog + Newsletter</Link>
                 </li>
                 <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
                   <Link href="/portfolio">Portfolio</Link>
