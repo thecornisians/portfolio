@@ -81,16 +81,10 @@ export default function Navbar() {
                 } `}
               >
                 <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <Link href="/portfolio">Portfolio</Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <a
-                    href="https://cowans.substack.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Blog
-                  </a>
+                  <Link href="/portfolio">Portfolio</Link>
                 </li>
                 <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
                   <Link href="/contact">Contact</Link>
