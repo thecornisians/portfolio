@@ -29,12 +29,12 @@ export default function About() {
           <h3 className="text-4xl mb-12 source-sans font-extrabold text-center lg:text-right">
             About Me
           </h3>
-          <p className="font-md md:font-xl md:text-left mb-2 source-sans ">
+          <p className="md:text-left mb-2 source-sans ">
             I am a Full stack Software Engineer who loves building products that
             help make the world a little better. Skilled in solving problems
             with HTML, CSS, JavaScript, React, Nextjs, Node, Express, MongoDB.
           </p>
-          <p className="font-md md:font-xl md:text-left mb-2 source-sans">
+          <p className="md:text-left mb-2 source-sans">
             A lifelong learner with interests spanning different disciplines. We
             can have a chat about psychology, philosophy, Economics, Physics,
             etc. I write about my learnings in my weekly newsletter{" "}
