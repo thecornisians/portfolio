@@ -21,7 +21,7 @@ export default function Post({ postData }) {
         </span>
 
         <div
-          className="md:text-lg source-sans"
+          className="md:text-lg source-sans "
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </section>

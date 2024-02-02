@@ -8,7 +8,7 @@ shortDescription: "Binary search is a searching algorithm designed for sorted ar
 
 &ensp;
 
-An algorithm is a set of instructions for accomplishing a task similar to following a cooking recipe. Binary search is a searching algorithm designed for sorted array or list. Binary search efficiently narrows down the search space by repeatedly dividing our search interval in half until we locate the position of the element we are searching for. It is important to note that binary search can only be used effectively when the list or array is sorted. If the element is present in the list, binary search will reveal the position of the element; otherwise, it will indicate that the element is not in the sorted list.
+An algorithm is a set of instructions for accomplishing a task similar to following a cooking recipe. Binary search is a searching algorithm designed for sorted array or list. It efficiently narrows down the search space by repeatedly dividing our search interval in half until we locate the position of the element we are searching for. It is important to note that binary search can only be used effectively when the list or array is sorted. If the element is present in the list, binary search will reveal the position of the element; otherwise, it will indicate that the element is not in the sorted list.
 
 &ensp;
 
@@ -18,8 +18,10 @@ Consider a scenario where we aim to locate a target number within the range of 1
 
 &nbsp;
 
-A more efficient way to approach this is to start by finding the middle number in our list, which in this case is 50. We then check if our target number is less than, greater than, or equal to 50.For instance, since 50 is less than our target number 99, we can eliminate all the numbers from 1 to 50 and focus on the range between 51 and 100.The process repeats: we find the middle number between 51 and 100, which is 75. Checking if 75 is greater than, less than, or equal to our target number, we discover that 75 is less than our target number. This means we can ignore all the numbers on the left side (51-75). This iterative process continues until we find our target number. Using this approach, it will take approximately 7 iterations to go through the whole list and find the number we are looking for.
+A more efficient way to approach this is to start by finding the middle number in our list, which in this case is 50. We then check if our target number is less than, greater than, or equal to 50. For instance, since 50 is less than our target number 99, we can eliminate all the numbers from 1 to 50 and focus on the range between 51 and 100.The process repeats: we find the middle number between 51 and 100, which is 75. Checking if 75 is greater than, less than, or equal to our target number, we discover that 75 is less than our target number. This means we can ignore all the numbers on the left side (51-75). This iterative process continues until we find our target number. Using this approach, it will take approximately 7 iterations to go through the whole list and find the number we are looking for.
+
 &nbsp;
+
 By employing a binary search, we significantly reduce the time required to search through the list because with each iteration, we eliminate over half of the list that does not contain our search item. This stands in stark contrast to a linear search, where each iteration checks one number at a time, resulting in a considerably longer process.
 
 &ensp;
@@ -60,15 +62,19 @@ function binarySearch(sortedList, targetItem):
     highIndex = length of sortedList - 1
 
     while lowIndex <= highIndex:
-        middleIndex = (lowIndex + highIndex) / 2  // Calculate the middle index
+        // Calculate the middle index
+        middleIndex = (lowIndex + highIndex) / 2
 
         if sortedList[middleIndex] is equal to targetItem:
-            return middleIndex  // If the middle item is the target item, return its index
+            // If the middle item is the target item, return its index
+            return middleIndex
         else if targetItem is less than sortedList[middleIndex]:
-            // If the target item is less than the middle item, adjust the high index to the left half
+            // If the target item is less than the middle item,
+            //adjust the high index to the left half
             highIndex = middleIndex - 1
         else:
-            // If the target item is more than the middle item, adjust the low index to the right half
+            // If the target item is more than the middle item,
+            //adjust the low index to the right half
             lowIndex = middleIndex + 1
 
     return -1  // If the target item was not found in the list, return -1
@@ -86,7 +92,8 @@ function binarySearch(sortedList, target) {
   let high = sortedList.length - 1;
 
   while (low <= high) {
-    //We use Math.floor to ensure we get an integer rather than a floating point number
+    //We use Math.floor to ensure we get an
+    //integer rather than a floating point number
     let middleNumber = Math.floor((low + high) / 2);
     let guess = sortedList[middleNumber];
 
@@ -103,8 +110,10 @@ function binarySearch(sortedList, target) {
 //Test case
 const list = [1, 3, 5, 7, 9];
 
-console.log(binarySearch(list, 5)); // returns 2 because our target number 5 is at index 2
-console.log(binarySearch(list, 10)); //return -1 because 10 is not in our list
+console.log(binarySearch(list, 5));
+// returns 2 because our target number 5 is at index 2
+console.log(binarySearch(list, 10));
+//return -1 because 10 is not in our list
 ```
 
 &nbsp;
@@ -112,3 +121,7 @@ console.log(binarySearch(list, 10)); //return -1 because 10 is not in our list
 ### **Conclusion**
 
 In this article we have learnt about binary search and how to implement it. The efficiency of binary search in sorted arrays can greatly impact algorithmic performance. Feel free to leave a message or send an email if you have any questions.
+
+```
+
+```
