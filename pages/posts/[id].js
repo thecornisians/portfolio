@@ -1,7 +1,9 @@
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import { getAlllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Post({ postData }) {
   return (
@@ -19,10 +21,15 @@ export default function Post({ postData }) {
         </span>
 
         <div
-          className="md:text-lg"
+          className="md:text-lg source-sans"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </section>
+      <p className="text-center mt-3 md:mt-6 uppercase hover:text-gray-700">
+        {" "}
+        <Link href="/blog">Back to blog posts</Link>
+      </p>
+      <Footer />
     </div>
   );
 }
