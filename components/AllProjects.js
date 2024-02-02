@@ -23,26 +23,26 @@ export default function AllProjects() {
                   src={image}
                   width={400}
                   height={220}
-                  className="rounded-lg image shadow-lg"
+                  className="rounded-lg image shadow-lg "
                   alt="creative-connect"
                 />
                 <p className="text-base mt-1  source-sans px-3">{title}</p>
 
                 <div className="md:mb-12 flex gap-3 mt-3">
-                  <a
+                  {/* <a
                     href={githubLink}
                     target="_blank"
                     rel="noreferrer"
                     className="bg-black text-white source-sans py-1 px-4 rounded inline-flex "
                   >
                     Github
-                  </a>
+                  </a> */}
 
                   <a
                     href={liveLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-black text-white source-sans py-1 px-4 rounded inline-flex "
+                    className="bg-black hover:bg-gray-700 text-white text-sm source-sans py-1 px-3 rounded inline-flex "
                   >
                     Live Site
                   </a>
@@ -71,10 +71,10 @@ const Projects = [
     liveLink: "https://creativeconnect.cyclic.app/",
   },
   {
-    image: "/nanaasomani.png",
-    title: "Portfolio website for client built with HTML, CSS, Javascript.",
-    githubLink: "https://github.com/thecornisians/nanaasomani-website",
-    liveLink: "https://nanaasomani.com/",
+    image: "/n3d1.png",
+    title: "Client website built with NextJS, Framer-motion and Tailwind CSS",
+    githubLink: "#",
+    liveLink: "https://www.n3dstudios.com/",
   },
   {
     image: "/happynotes.gif",
@@ -84,8 +84,15 @@ const Projects = [
     liveLink: "https://happynotes.cyclic.app/",
   },
   {
+    image: "/nanaasomani.png",
+    title: "Portfolio website for client built with HTML, CSS, Javascript.",
+    githubLink: "https://github.com/thecornisians/nanaasomani-website",
+    liveLink: "https://nanaasomani.com/",
+  },
+
+  {
     image: "/wbgroup.png",
-    title: "client site built with React/NextJS and Tailwind CSS",
+    title: "Client site built with React/NextJS and Tailwind CSS",
     githubLink: "https://github.com/thecornisians/wb-group",
     liveLink: "https://wbgrouprepresents.com/",
   },
@@ -94,6 +101,12 @@ const Projects = [
     title: "Website built for the Chill River Resort.",
     githubLink: "#",
     liveLink: "https://thechillgh.com/",
+  },
+  {
+    image: "/fiifi.png",
+    title: "Portfolio website for Client",
+    githubLink: "#",
+    liveLink: "https://fiifi-abban-main.vercel.app/",
   },
   {
     image: "/shopamargaret.png",
@@ -114,7 +127,13 @@ const Projects = [
     liveLink: "https://nurtureholiks.com/",
   },
   {
-    image: "/larryjay.png",
+    image: "/alphaaesthetika.png",
+    title: "Website for Alphaaesthetika",
+    githubLink: "#",
+    liveLink: "https://alphaaesthetika.com/",
+  },
+  {
+    image: "/larryjay2.png",
     title: "Ecommerce fashion website built for Larry Jay Ghana",
     githubLink: "#",
     liveLink: "https://larryjayghana.com/",
@@ -124,6 +143,12 @@ const Projects = [
     title: "Website built with Html, Bootstrap, Javascript",
     githubLink: "https://github.com/thecornisians/Hale-Options",
     liveLink: "https://haleoptionz.com/",
+  },
+  {
+    image: "/victorhart.png",
+    title: "Ecommerce Website for Victor Hart",
+    githubLink: "#",
+    liveLink: "https://victor-hart.com/",
   },
 ];
 
