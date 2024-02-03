@@ -49,66 +49,65 @@ This is essentially asking: “How many times do you need to multiply 10 by itse
 
 ## **Implementing Binary Search**
 
-My code here is going to be in JavaScript but I will write out a pseudo code of the process so you can transfer to whichever programming language of choice.As stated earlier binary search works on sorted input, so we can assume that our list is sorted
+My code here is going to be in JavaScript but I will write out a pseudo code of the process so you can transfer to whichever programming language of choice. As stated earlier binary search works on sorted input, so we can assume that our list is sorted
 
 &nbsp;
 
-**Pseudo Code**
+## **Pseudo Code**
 
 ```js
 
 function binarySearch(sortedList, targetItem):
-    lowIndex = 0
-    highIndex = length of sortedList - 1
+  lowIndex = 0
+  highIndex = length of sortedList - 1
 
     while lowIndex <= highIndex:
-        // Calculate the middle index
-        middleIndex = (lowIndex + highIndex) / 2
+      // Calculate the middle index
+      middleIndex = (lowIndex + highIndex) / 2
 
-        if sortedList[middleIndex] is equal to targetItem:
-            // If the middle item is the target item, return its index
-            return middleIndex
-        else if targetItem is less than sortedList[middleIndex]:
-            // If the target item is less than the middle item,
-            //adjust the high index to the left half
-            highIndex = middleIndex - 1
-        else:
-            // If the target item is more than the middle item,
-            //adjust the low index to the right half
-            lowIndex = middleIndex + 1
+      if sortedList[middleIndex] is equal to targetItem:
+      // If the middle item is the target item, return its index
+      return middleIndex
+      else if targetItem is less than sortedList[middleIndex]:
+      // If the target item is less than the middle item,
+      //adjust the high index to the left half
+      highIndex = middleIndex - 1
+      else:
+      // If the target item is more than the middle item,
+      //adjust the low index to the right half
+      lowIndex = middleIndex + 1
 
     return -1  // If the target item was not found in the list, return -1
-
-
 ```
+
+</pre>
 
 Full code in JavaScript
 
 &nbsp;
 
 ```js
-function binarySearch(sortedList, target) {
-  let low = 0;
-  let high = sortedList.length - 1;
+function binarySearch(sortedList, targetItem) {
+  let lowIndex = 0;
+  let highIndex = sortedList.length - 1;
 
-  while (low <= high) {
+  while (lowIndex <= highIndex) {
+    // Calculate the middle index
     //We use Math.floor to ensure we get an
     //integer rather than a floating point number
-    let middleNumber = Math.floor((low + high) / 2);
-    let guess = sortedList[middleNumber];
+    let middleIndex = Math.floor((lowIndex + highIndex) / 2);
 
-    if (guess === target) return middleNumber;
-    else if (guess < target) {
-      low = middleNumber + 1;
-    } else if (guess > target) {
-      high = middleNumber - 1;
+    if (sortedList[middleIndex] === targetItem) {
+      return middleIndex;
+    } else if (targetItem < sortedList[middleIndex]) {
+      highIndex = middleIndex - 1;
+    } else {
+      lowIndex = middleIndex + 1;
     }
   }
+
   return -1;
 }
-
-//Test case
-const list = [1, 3, 5, 7, 9];
 
 console.log(binarySearch(list, 5));
 // returns 2 because our target number 5 is at index 2
@@ -121,7 +120,3 @@ console.log(binarySearch(list, 10));
 ### **Conclusion**
 
 In this article we have learnt about binary search and how to implement it. The efficiency of binary search in sorted arrays can greatly impact algorithmic performance. Feel free to leave a message or send an email if you have any questions.
-
-```
-
-```
