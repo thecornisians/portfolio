@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Post({ postData }) {
   return (
-    <div className="text-white">
+    <div className="text-white container">
       <Head>
         <title>{postData.title}</title>
       </Head>

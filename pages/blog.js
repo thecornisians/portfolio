@@ -26,7 +26,7 @@ export default function Blog({ allPostsData }) {
             <li key={id} className="mb-8 md:mb-12">
               <div>
                 <h4 className=" text-xl md:text-2xl font-bold md:text-left source-sans hover:text-gray-400">
-                  <Link href={`/posts/${id}`}>{title}</Link>
+                  <Link href={`/blog/${id}`}>{title}</Link>
                 </h4>
                 <p className="text-sm my-2 text-gray-300 source-sans">
                   Published <Date dateString={date} />
