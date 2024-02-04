@@ -57,28 +57,30 @@ My code here is going to be in JavaScript but I will write out a pseudo code of 
 
 ## **Pseudo Code**
 
+```js
 function binarySearch(sortedList, targetItem):
 lowIndex = 0
 highIndex = length of sortedList - 1
 
-    while lowIndex <= highIndex:
-      // Calculate the middle index
-      middleIndex = (lowIndex + highIndex) / 2
+  while lowIndex <= highIndex:
+    // Calculate the middle index
+    middleIndex = (lowIndex + highIndex) / 2
 
-      if sortedList[middleIndex] is equal to targetItem:
-      // If the middle item is the target item, return its index
+    if sortedList[middleIndex] is equal to targetItem:
+    // If the middle item is the target item, return its index
       return middleIndex
-      else if targetItem is less than sortedList[middleIndex]:
-      // If the target item is less than the middle item,
-      //adjust the high index to the left half
+    else if targetItem is less than sortedList[middleIndex]:
+    // If the target item is less than the middle item,
+    //adjust the high index to the left half
       highIndex = middleIndex - 1
-      else:
+    else:
       // If the target item is more than the middle item,
       //adjust the low index to the right half
-      lowIndex = middleIndex + 1
+    lowIndex = middleIndex + 1
 
     // If the target item was not found in the list,
     return -1
+```
 
 &nbsp;
 

@@ -12,7 +12,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <Navbar />
-      <section className="px-6 md:px-[5rem] max-w-screen-lg mx-auto">
+      <section className="px-6 md:px-[5rem] mx-auto">
         <h4 className="text-4xl mb-2 source-sans font-extrabold text-center lg:text-center">
           {postData.title} <br />
         </h4>
