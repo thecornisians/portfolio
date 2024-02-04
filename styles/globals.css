@@ -37,3 +37,10 @@ p {
   max-width: 100%;
   width: 100%;
 }
+
+@media screen and (max-width: 640px) {
+  code {
+    font-size: 0.7rem;
+    padding-inline: 10px;
+  }
+}

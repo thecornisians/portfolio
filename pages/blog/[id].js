@@ -25,7 +25,7 @@ export default function Post({ postData }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </section>
-      <p className="text-center mt-3 md:mt-6 uppercase hover:text-gray-700">
+      <p className="text-center source-sans mt-6 uppercase hover:text-gray-700">
         {" "}
         <Link href="/blog">Back to blog posts</Link>
       </p>

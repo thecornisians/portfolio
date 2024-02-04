@@ -9,7 +9,7 @@ export default function Footer() {
       <span className="text-md text-gray-500 sm:text-center dark:text-gray-400">
         © {new Date().getFullYear()} Cornelius Owusu-Ansah.
       </span>
-      <ul className="flex flex-wrap items-center gap-2 mt-3 text-md text-gray-500 dark:text-gray-400 sm:mt-0">
+      <ul className="flex flex-wrap items-center gap-2 mt-8 text-md text-gray-500 dark:text-gray-400 ">
         <li>
           <a
             href="https://www.linkedin.com/in/corneliusoa/"

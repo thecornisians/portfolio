@@ -59,6 +59,8 @@ My code here is going to be in JavaScript but I will write out a pseudo code of 
 
 ```js
 function binarySearch(sortedList, targetItem):
+//arrays are zero indexed
+//so our low index starts at position 0
 lowIndex = 0
 highIndex = length of sortedList - 1
 
@@ -67,7 +69,7 @@ highIndex = length of sortedList - 1
     middleIndex = (lowIndex + highIndex) / 2
 
     if sortedList[middleIndex] is equal to targetItem:
-    // If the middle item is the target item, return its index
+    // If the middle item is the target item,
       return middleIndex
     else if targetItem is less than sortedList[middleIndex]:
     // If the target item is less than the middle item,

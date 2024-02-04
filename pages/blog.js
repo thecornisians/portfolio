@@ -61,7 +61,7 @@ export default function Blog({ allPostsData }) {
           </li>
         </ul>
       </section>
-      {/* <div>
+      <div>
         <iframe
           src="https://cowans.substack.com/embed"
           width="480"
@@ -72,7 +72,7 @@ export default function Blog({ allPostsData }) {
             marginInline: "auto",
           }}
         ></iframe>
-      </div> */}
+      </div>
       <Footer />
     </div>
   );
