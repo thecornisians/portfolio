@@ -13,7 +13,7 @@ export default function Post({ postData }) {
       </Head>
       <Navbar />
       <section className="px-6 md:px-[5rem] mx-auto">
-        <h4 className="text-4xl mb-2 source-sans font-extrabold text-center lg:text-center">
+        <h4 className="text-4xl my-2 source-sans font-extrabold text-center lg:text-center">
           {postData.title} <br />
         </h4>
         <span className="flex justify-center mb-12">

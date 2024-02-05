@@ -1,4 +1,5 @@
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import Link from "next/link";
 
 export default function BlogPosts() {
   return (
@@ -21,12 +22,12 @@ export default function BlogPosts() {
             repeatedly dividing our search interval in half until we locate the
             position of the element we are searching for.
           </p>
-          <a
-            className="hover:text-cyan-300 flex content-center"
-            href="/blog/binarysearch"
-          >
-            Read More <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
-          </a>
+          <Link href="/blog/binarysearch" className="cursor-pointer">
+            <div className="hover:text-cyan-300 flex content-center">
+              Read More
+              <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
+            </div>
+          </Link>
         </div>
 
         <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-gray-900 rounded-md">
@@ -72,5 +73,3 @@ export default function BlogPosts() {
     </section>
   );
 }
-
-//
