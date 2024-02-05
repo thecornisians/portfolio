@@ -15,9 +15,9 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
   return (
-    <div className="text-white">
+    <div className="text-white min-h-screen">
       <Navbar />
-      <section>
+      <section className="flex-1">
         <h3 className="text-4xl mb-12 source-sans font-extrabold text-center lg:text-center">
           Blog Posts
         </h3>
@@ -61,10 +61,10 @@ export default function Blog({ allPostsData }) {
           </li>
         </ul>
       </section>
-      <div>
+      <div className="hidden md:block">
         <iframe
           src="https://cowans.substack.com/embed"
-          width="480"
+          width="400"
           height="320"
           style={{
             // border: "1px solid #EEE",
