@@ -64,18 +64,19 @@ export default function AllProjects() {
 
 const Projects = [
   {
+    image: "/n3d1.png",
+    title: "Client website built with NextJS, Framer-motion and Tailwind CSS",
+    githubLink: "#",
+    liveLink: "https://www.n3dstudios.com/",
+  },
+  {
     image: "/creativesConnect.gif",
     title:
       "Full stack application with authentication built with Node,express, MongoDB and EJS.",
     githubLink: "https://github.com/thecornisians/Creatives-connect",
     liveLink: "https://creativeconnect.cyclic.app/",
   },
-  {
-    image: "/n3d1.png",
-    title: "Client website built with NextJS, Framer-motion and Tailwind CSS",
-    githubLink: "#",
-    liveLink: "https://www.n3dstudios.com/",
-  },
+
   {
     image: "/happynotes.gif",
     title:
@@ -106,7 +107,7 @@ const Projects = [
     image: "/fiifi.png",
     title: "Portfolio website for Client",
     githubLink: "#",
-    liveLink: "https://fiifi-abban-main.vercel.app/",
+    liveLink: "https://www.fiifiabban.com/",
   },
   {
     image: "/shopamargaret.png",
