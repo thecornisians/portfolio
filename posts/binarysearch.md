@@ -113,6 +113,8 @@ function binarySearch(sortedList, targetItem) {
   return -1;
 }
 
+//Test case
+const list = [1, 3, 5, 7, 9];
 console.log(binarySearch(list, 5));
 // returns 2 because our target number 5 is at index 2
 console.log(binarySearch(list, 10));
