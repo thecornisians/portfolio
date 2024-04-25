@@ -22,11 +22,11 @@ export default function AllProjects() {
                 <Image
                   src={image}
                   width={400}
-                  height={220}
-                  className="rounded-lg image shadow-lg "
+                  height={250}
+                  className="max-w-full rounded-lg shadow-lg "
                   alt="creative-connect"
                 />
-                <p className="text-base mt-1  source-sans px-3">{title}</p>
+                <p className="text-base mt-1 source-sans px-3">{title}</p>
 
                 <div className="md:mb-12 flex gap-3 mt-3">
                   {/* <a
@@ -85,6 +85,12 @@ const Projects = [
     liveLink: "https://happynotes.cyclic.app/",
   },
   {
+    image: "/tris.png",
+    title: " Client Website built with NextJS, Tailwind CSS and Framer Motion.",
+    githubLink: "#",
+    liveLink: "https://www.theremedyissolidarity.com/",
+  },
+  {
     image: "/nanaasomani.png",
     title: "Portfolio website for client built with HTML, CSS, Javascript.",
     githubLink: "https://github.com/thecornisians/nanaasomani-website",
@@ -96,6 +102,12 @@ const Projects = [
     title: "Client site built with React/NextJS and Tailwind CSS",
     githubLink: "https://github.com/thecornisians/wb-group",
     liveLink: "https://wbgrouprepresents.com/",
+  },
+  {
+    image: "/jermainebleu.png",
+    title: "Ecommerce Website built for Jermaine Bleu.",
+    githubLink: "#",
+    liveLink: "https://www.jermainebleu.studio/",
   },
   {
     image: "/chillresort.png",
