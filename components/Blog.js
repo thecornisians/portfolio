@@ -14,7 +14,7 @@ export default function BlogPosts() {
       </div>
 
       <div className="mt-5 px-5 pb-4">
-        <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-gray-900 rounded-md">
+        <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-[#363e44] rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">Binary Search</h1>
           <p className="pb-3 text-lg source-sans">
             Binary search is a searching algorithm designed for sorted array or
@@ -23,14 +23,14 @@ export default function BlogPosts() {
             position of the element we are searching for.
           </p>
           <Link href="/blog/binarysearch" className="cursor-pointer">
-            <div className="hover:text-cyan-300 flex content-center">
+            <div className="hover:text-cyan-300 flex content-center cursor-pointer">
               Read More
               <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
             </div>
           </Link>
         </div>
 
-        <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-gray-900 rounded-md">
+        <div className="mb-7 shadow-lg p-4 border border-gray-400  rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">
             A simple introduction to the MVC Architechture
           </h1>

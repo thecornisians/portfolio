@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import Hi from "../public/hi.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
