@@ -78,11 +78,11 @@ const Projects = [
   },
 
   {
-    image: "/happynotes.gif",
+    image: "/ampofofrema.png",
     title:
-      " Full stack to-do application built with Node, express, MongoDB and bootstrap for styling.",
-    githubLink: "https://github.com/thecornisians/happy-notes",
-    liveLink: "https://happynotes.cyclic.app/",
+      " Wedding website built with NextJS, Tailwind CSS and Framer Motion.",
+    githubLink: "#",
+    liveLink: "https://ampofoandfrema.com/",
   },
   {
     image: "/tris.png",
@@ -116,10 +116,24 @@ const Projects = [
     liveLink: "https://thechillgh.com/",
   },
   {
+    image: "/grace.png",
+    title:
+      "Ecommerce Website built for GP consulting using NextJs, Tailwind and Stipe",
+    githubLink: "#",
+    liveLink: "https://gracepatrice.com/",
+  },
+  {
     image: "/fiifi.png",
     title: "Portfolio website for Client",
     githubLink: "#",
     liveLink: "https://www.fiifiabban.com/",
+  },
+  {
+    image: "/happynotes.gif",
+    title:
+      " Full stack to-do application built with Node, express, MongoDB and bootstrap for styling.",
+    githubLink: "https://github.com/thecornisians/happy-notes",
+    liveLink: "https://happynotes.cyclic.app/",
   },
   {
     image: "/shopamargaret.png",
@@ -133,6 +147,7 @@ const Projects = [
     githubLink: "#",
     liveLink: "https://shopalwoman.com/",
   },
+
   {
     image: "/nurtureholiks.png",
     title: "Ecommerce website built for Nurtureholiks.",
@@ -150,6 +165,12 @@ const Projects = [
     title: "Ecommerce fashion website built for Larry Jay Ghana",
     githubLink: "#",
     liveLink: "https://larryjayghana.com/",
+  },
+  {
+    image: "/lotusopticals.png",
+    title: "Ecommerce Website for Lotus Opticals",
+    githubLink: "#",
+    liveLink: "https://thelotusopticals.com/",
   },
   {
     image: "/haleoptions.png",
