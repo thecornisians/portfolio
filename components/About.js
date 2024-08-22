@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { icons } from "react-icons";
 import cornelius from "../public/cornelius.JPG";
 import { FaReact, FaBootstrap, FaHtml5 } from "react-icons/fa";
 import {

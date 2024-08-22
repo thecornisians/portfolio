@@ -31,7 +31,7 @@ export default function Home({ portfolioImage }) {
           <div className="flex justify-center items-center text-lg md:text-xl source-sans">
             <IoMdMail />{" "}
             <a className="text-white" href="mailto:thecornisians@gmail.com">
-              : thecornisians@gmail.com
+              : thecornisians[at]gmail.com
             </a>
           </div>
         </div>

@@ -3,15 +3,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AllProjects from "../components/AllProjects";
 
+export default function portfolioPage() {
+  return (
+    <section className="bg-gray-300">
+      <Navbar />
+      <AllProjects className="min-h-full" />
 
-export default function portfolioPage(){
-    return (
-        <section className="bg-gray-200">
-            <Navbar />
-            <AllProjects className="min-h-full"/>
-
-            <Footer />
-        </section>
-    )
-} 
-
+      <Footer />
+    </section>
+  );
+}
