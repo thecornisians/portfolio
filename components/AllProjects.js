@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BiArrowBack } from "react-icons/bi";
 
 export default function AllProjects() {
   return (
@@ -54,9 +55,10 @@ export default function AllProjects() {
       </div>
 
       <Link href="/">
-        <p className="text-[#1DB67D] cursor-pointer text-center hover:text-black text-2xl source-sans">
-          Back to Home
-        </p>
+        <div className="text-black flex items-center justify-center mb-5 space-x-2 hover:text-gray-400 transition hover:cursor-pointer">
+          <BiArrowBack size={20} />
+          <span>Back to home</span>
+        </div>
       </Link>
     </section>
   );
