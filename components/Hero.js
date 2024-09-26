@@ -4,8 +4,7 @@ import {
   FaGithubSquare,
   FaArrowCircleDown,
 } from "react-icons/fa";
-import Image from "next/image";
-import Hi from "../public/hi.png";
+// import Hi from "../public/hi.png";
 import Link from "next/link";
 
 export default function Hero() {
@@ -25,12 +24,11 @@ export default function Hero() {
             <p className="text-lg py-5 leading-8  md:text-2xl max-w-xl mx-auto mb-6 lg:mb-8">
               Full-stack Software Engineer.
             </p>
-            <a
-              href="#portfolio"
-              className="rounded-full my-5 bg-[#1DB67D] px-10 py-5 outline-none scroll-smooth hover:bg-cyan-200 bg-white-500 font-serif mb-6 source-sans"
-            >
-              Explore Portfolio
-            </a>
+            <Link href="/portfolio" className="cursor-pointer">
+              <span className="rounded-full my-5 bg-[#1DB67D] px-10 py-5 outline-none scroll-smooth hover:bg-cyan-200 mb-6 source-sans cursor-pointer hover:text-black">
+                Explore Portfolio
+              </span>
+            </Link>
           </div>
 
           <div className=" flex justify-center gap-3 text-5xl mt-6">
