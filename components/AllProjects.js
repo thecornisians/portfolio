@@ -72,20 +72,26 @@ const Projects = [
     liveLink: "https://www.n3dstudios.com/",
   },
   {
+    image: "/christiansaint.png",
+    title: "Client website built with NextJS, Framer-motion and Tailwind CSS",
+    githubLink: "https://christiansaint.co",
+    liveLink: "https://christiansaint.co",
+  },
+  {
     image: "/creativesConnect.gif",
     title:
       "Full stack application with authentication built with Node,express, MongoDB and EJS.",
     githubLink: "https://github.com/thecornisians/Creatives-connect",
     liveLink: "https://creativeconnect.cyclic.app/",
   },
-
   {
-    image: "/ampofofrema.png",
+    image: "/grace.png",
     title:
-      " Wedding website built with NextJS, Tailwind CSS and Framer Motion.",
+      "Portfolio and Ecommerce Website built for GP consulting using NextJs and Stripe.",
     githubLink: "#",
-    liveLink: "https://ampofoandfrema.com/",
+    liveLink: "https://gracepatrice.com/",
   },
+
   {
     image: "/tris.png",
     title: " Client Website built with NextJS, Tailwind CSS and Framer Motion.",
@@ -118,17 +124,23 @@ const Projects = [
     liveLink: "https://thechillgh.com/",
   },
   {
-    image: "/grace.png",
+    image: "/ampofofrema.png",
     title:
-      "Portfolio and Ecommerce Website built for GP consulting using NextJs and Stripe.",
+      " Wedding website built with NextJS, Tailwind CSS and Framer Motion.",
     githubLink: "#",
-    liveLink: "https://gracepatrice.com/",
+    liveLink: "https://ampofoandfrema.com/",
   },
   {
-    image: "/fiifi.png",
+    image: "/fiifiabban.png",
     title: "Portfolio website for Client.",
     githubLink: "#",
     liveLink: "https://www.fiifiabban.com/",
+  },
+  {
+    image: "/vivaaccra.png",
+    title: "Ecommerce website built for Viva Accra.",
+    githubLink: "#",
+    liveLink: "https://vivaaccra.com/",
   },
   {
     image: "/happynotes.gif",
@@ -137,11 +149,12 @@ const Projects = [
     githubLink: "https://github.com/thecornisians/happy-notes",
     liveLink: "https://happynotes.cyclic.app/",
   },
+
   {
-    image: "/shopamargaret.png",
-    title: "Ecommerce website built for Amargaretgh.",
+    image: "/nurtureholiks2.png",
+    title: "Ecommerce website built for Nurtureholiks.",
     githubLink: "#",
-    liveLink: "https://shopamargaret.com/",
+    liveLink: "https://nurtureholiks.com/",
   },
   {
     image: "/alwoman.png",
@@ -151,10 +164,10 @@ const Projects = [
   },
 
   {
-    image: "/nurtureholiks.png",
-    title: "Ecommerce website built for Nurtureholiks.",
+    image: "/shopamargaret.png",
+    title: "Ecommerce website built for Amargaretgh.",
     githubLink: "#",
-    liveLink: "https://nurtureholiks.com/",
+    liveLink: "https://shopamargaret.com/",
   },
   {
     image: "/alphaaesthetika.png",
