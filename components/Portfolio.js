@@ -2,36 +2,42 @@ import Link from "next/link";
 import Image from "next/image";
 import palmmoment from "../public/palmmoment.png";
 import Nanaasomani from "../public/nanaasomani.png";
-import cornelius from "../public/wbgroup.png";
-import gaderin from "../public/gaderin.png";
+import wbgroup from "../public/wbgroup.png";
+import gaderin from "../public/gaderinn.png";
+import { Github, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
 
 const projects = [
   {
+    title: "Gaderin",
     image: gaderin,
-    alt: "gaderin",
+    alt: "Gaderin",
     description:
       "Full stack application with authentication built with NextJS, express, MongoDB, Paystack API etc.",
     github: "#",
     live: "https://thegaderin.com/",
   },
   {
+    title: "Nana Asomani",
     image: Nanaasomani,
-    alt: "nanaasomani",
+    alt: "Nana Asomani",
     description:
       "Portfolio website for client built with HTML, CSS, Javascript.",
     live: "https://nanaasomani.com/",
   },
   {
+    title: "Palm Moments",
     image: palmmoment,
-    alt: "palm moments",
+    alt: "Palm Moments",
     description:
       "Client website built with NextJS, Framer-motion and Tailwind CSS",
     github: "https://github.com/thecornisians/happy-notes",
-    live: "https://www.palmmomemt.com/",
+    live: "https://www.palmmoment.com/",
   },
   {
-    image: cornelius,
-    alt: "cornelius owusu-ansah",
+    title: "WB Group",
+    image: wbgroup,
+    alt: "WB Group",
     description: "Client site built with React/NextJS and Tailwind CSS",
     github: "https://github.com/thecornisians/wb-group",
     live: "https://wbgrouprepresents.com",
@@ -64,37 +70,45 @@ export default function Portfolio() {
   );
 }
 
-function ProjectCard({ image, alt, description, github, live }) {
+function ProjectCard({ image, alt, description, github, live, title }) {
   return (
-    <div className="flex flex-col mb-2">
-      <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+    <div className="group border rounded-2xl overflow-hidden bg-black text-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow">
+      <div className="relative w-full h-[11rem]">
         <Image
           src={image}
-          className="absolute inset-0 rounded-lg shadow-lg object-cover md:hover:scale-105 transition duration-300 ease-in-out"
           alt={alt}
           layout="fill"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
-      <p className="text-sm my-3 md:text-md source-sans">{description}</p>
-      <div className="flex gap-3 mt-2">
-        {/* {github && (
-          <a
-            className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github Repo
-          </a>
-        )} */}
-        <a
-          className="px-1.5 py-1.5 mr-2 text-white rounded-md bg-gray-800 hover:bg-gray-400 text-sm"
-          href={live}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Live Site
-        </a>
+
+      <div className="p-4 flex flex-col justify-between h-[200px]">
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
+          <p className="text-sm text-muted-foreground line-clamp-3 my-4">
+            {description}
+          </p>
+        </div>
+
+        <div className="flex items-center justify-between mt-4">
+          {github ? (
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost">
+                <Github size={18} />
+              </Button>
+            </a>
+          ) : (
+            <span />
+          )}
+
+          {live && (
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="rounded-full hover:text-gray-500">
+                Visit Site <ExternalLink size={14} className="ml-1" />
+              </Button>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

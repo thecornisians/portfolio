@@ -30,7 +30,7 @@ const Projects = [
   },
   {
     id: 2,
-    image: "/gaderin.png",
+    image: "/gaderinn.png",
     title: "Gaderin",
     description:
       "Fullstack project - NextJS, TailwindCSS, MongoDB, Cloudinary, NextAuth, Paystack api, and more.",
@@ -148,7 +148,7 @@ const Projects = [
     githubLink: "#",
     liveLink: "https://ampofoandfrema.com/",
     tags: ["NextJS", "Tailwind CSS", "Framer Motion"],
-    category: "event",
+    category: "wedding",
   },
   {
     id: 13,
@@ -284,20 +284,24 @@ export default function AllProjects() {
   return (
     <section className="px-4 md:px-8 py-10 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
-        <div className="flex items-center w-full md:w-1/2 space-x-2">
-          <Search className="text-muted-foreground" size={20} />
+        <div className="relative w-full md:w-1/2">
+          <Search
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground"
+            size={18}
+          />
           <Input
             placeholder="Search projects..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10" // <-- Adds space for the icon
           />
         </div>
 
         <Select onValueChange={(val) => setSelectedCategory(val)}>
-          <SelectTrigger className="w-[200px]">
+          <SelectTrigger className="w-[200px] bg-black text-white">
             <SelectValue placeholder="Filter by category" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-black text-white">
             {categories.map((cat) => (
               <SelectItem key={cat} value={cat}>
                 {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -311,28 +315,27 @@ export default function AllProjects() {
         {filtered.map((project) => (
           <div
             key={project.id}
-            className="group border rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow"
+            className="group border rounded-2xl overflow-hidden bg-black text-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow"
           >
-            <div className="relative w-full h-52">
+            <div className="relative w-full h-[11rem]">
               <Image
                 src={project.image}
                 alt={project.title}
                 layout="fill"
-                objectFit="cover"
-                className="group-hover:scale-105 transition-transform duration-300"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
 
-            <div className="p-4 flex flex-col justify-between h-[260px]">
+            <div className="p-4 flex flex-col justify-between h-[250px]">
               <div className="space-y-2">
                 <h3 className="text-lg font-semibold line-clamp-1">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted-foreground line-clamp-3">
+                <p className="text-sm text-muted-foreground line-clamp-3 my-4">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1 mt-2">
+                <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline">
                       {tag}
@@ -348,11 +351,18 @@ export default function AllProjects() {
                   </Button>
                 </Link>
 
-                <Link href={project.liveLink} target="_blank">
-                  <Button size="sm" className="rounded-full">
-                    Visit <ExternalLink size={14} className="ml-1" />
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="sm"
+                    className="rounded-full hover:text-gray-500"
+                  >
+                    Visit Site <ExternalLink size={14} className="ml-1" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
