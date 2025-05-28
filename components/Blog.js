@@ -14,9 +14,9 @@ export default function BlogPosts() {
       </div>
 
       <div className="mt-5 px-5 pb-4">
-        <div className="mb-7 shadow-lg p-4 border border-gray-400 bg-[#363e44] rounded-md">
+        <div className="mb-7 shadow-lg p-4 border border-gray-400 rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">Binary Search</h1>
-          <p className="pb-3 text-lg source-sans">
+          <p className="pb-3 text-base md:text-lg source-sans">
             Binary search is a searching algorithm designed for sorted array or
             list. Binary search efficiently narrows down the search space by
             repeatedly dividing our search interval in half until we locate the
@@ -34,7 +34,7 @@ export default function BlogPosts() {
           <h1 className="font-bold text-2xl pb-3 source-sans">
             A simple introduction to the MVC Architechture
           </h1>
-          <p className="pb-3 text-lg source-sans">
+          <p className="pb-3 text-base md:text-lg source-sans">
             The model-view controller is a way of implementing software design
             by diving it into components.In other words, it is a way of building
             software where you break down/separate the application into 3
@@ -50,11 +50,11 @@ export default function BlogPosts() {
           </a>
         </div>
 
-        <div className="mb-7 shadow-lg p-6 border border-gray-400 bg-gray-900 rounded-md">
+        <div className="mb-7 shadow-lg p-6 border border-gray-400 rounded-md">
           <h1 className="font-bold text-2xl pb-3 source-sans">
             The Fear of starting anything in life
           </h1>
-          <p className="pb-3 text-lg source-sans">
+          <p className="pb-3 text-base md:text-lg source-sans">
             Most people have the desire to do great things in life however not
             everyone acts on this desire. One reason for this is our fear of
             making something lame. We are held back by the fear of our work not

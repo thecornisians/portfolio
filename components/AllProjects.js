@@ -317,7 +317,7 @@ export default function AllProjects() {
             key={project.id}
             className="group border rounded-2xl overflow-hidden bg-black text-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow"
           >
-            <div className="relative w-full h-[11rem]">
+            <div className="relative w-full h-[10rem]">
               <Image
                 src={project.image}
                 alt={project.title}
