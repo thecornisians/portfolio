@@ -33,7 +33,7 @@ export default function Navbar() {
       <header className="bg-black dark:bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
         <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <Link href="/" passHref>
-            <a className="flex items-center text-[#1DB67D] font-semibold text-2xl tracking-wide cursor-pointer select-none">
+            <a className="flex items-center text-[#1DB67D] font-semibold text-base md:text-2xl tracking-wide cursor-pointer select-none">
               Cornelius OA
             </a>
           </Link>
