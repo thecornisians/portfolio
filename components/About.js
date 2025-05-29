@@ -69,7 +69,7 @@ export default function About() {
         <h4 className="text-3xl md:text-4xl font-extrabold mb-8 md:mb-12">
           Tech stack and frameworks
         </h4>
-        <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-11 gap-6 max-w-3xl mx-auto text-[#1DB67D] text-5xl md:text-6xl">
+        <div className="grid grid-cols-11 sm:grid-cols-6 md:grid-cols-11 gap-6 max-w-3xl mx-auto  text-2xl md:text-6xl">
           <FaReact className="hover:scale-110 transition-transform cursor-pointer" />
           <TbBrandNextjs className="hover:scale-110 transition-transform cursor-pointer" />
           <TbBrandJavascript className="hover:scale-110 transition-transform cursor-pointer" />

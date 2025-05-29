@@ -32,7 +32,7 @@ export default function BlogPosts() {
         <h4 className="font-bold text-3xl sm:text-4xl md:text-5xl text-white mb-4">
           Blog Posts
         </h4>
-        <p className="text-base text-gray-400 max-w-xl mx-auto">
+        <p className="text-base text-gray-400 max-w-xl mx-auto px-2">
           Here are some of my most recent blog posts (Tech and Non-tech)
         </p>
       </div>
