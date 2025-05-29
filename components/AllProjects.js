@@ -323,61 +323,75 @@ export default function AllProjects() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-white p-2">
           {filteredProjects.map((project) => (
-            <div
+            <ProjectCard
               key={project.id}
-              className="border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition "
-            >
-              <div className="relative w-full h-48 overflow-hidden mt-[-40px]">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, idx) => (
-                    <Badge key={idx} variant="outline">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="flex justify-between items-center">
-                  {project.githubLink && project.githubLink !== "#" && (
-                    <Link
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Button size="sm" variant="ghost">
-                        <Github size={16} className="mr-1" />
-                        Code
-                      </Button>
-                    </Link>
-                  )}
-
-                  {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noreferrer">
-                      <Button size="sm" variant="link">
-                        Live <ExternalLink size={16} className="ml-1" />
-                      </Button>
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+              image={project.image}
+              alt={project.title}
+              description={project.description}
+              github={project.githubLink}
+              live={project.liveLink}
+              title={project.title}
+              tags={project.tags}
+            />
           ))}
         </div>
       )}
     </section>
+  );
+}
+
+function ProjectCard({ image, alt, description, github, tags, live, title }) {
+  return (
+    <div className="group bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
+      <div className="relative w-full h-44 overflow-hidden">
+        <Image
+          src={image}
+          alt={alt}
+          layout="fill"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+
+      <div className="p-5 flex flex-col justify-between h-[245px]">
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold">{title}</h3>
+          <p className="text-sm text-zinc-400 line-clamp-3">{description}</p>
+        </div>
+
+        <div className="flex flex-wrap gap-2 my-4 text-sm">
+          {tags.map((tag, idx) => (
+            <Badge key={idx} variant="outline">
+              {tag}
+            </Badge>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-between pt-4">
+          {github ? (
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-[#1DB67D]"
+              >
+                <Github size={18} />
+              </Button>
+            </a>
+          ) : (
+            <span />
+          )}
+          {live && (
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="sm"
+                className="rounded-full text-white border border-white hover:border-[#1DB67D] hover:text-[#1DB67D] transition-colors"
+              >
+                Visit Site <ExternalLink size={14} className="ml-2" />
+              </Button>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }

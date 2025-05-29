@@ -1,100 +1,91 @@
 import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react";
-import contact from "../pages/contact";
-import about from "../pages/about";
-import portfolio from "../pages/portfolio";
-import { FaBars, FaTimes, FaRegMoon } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export default function Navbar() {
-  const [navbar, setNavbar] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
+  // Toggle dark mode classes on <html> element (optional enhancement)
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.toggle("dark");
+    }
+  };
+
+  const navLinks = [
+    { href: "/blog", label: "Blog + Newsletter" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <div>
+    <>
       <Head>
         <title>Cornelius Owusu-Ansah</title>
         <meta name="description" content="Software Engineer" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      {/* bg-[#161C2D] */}
-      <header className="bg-black border-5 border-white">
-        <nav className="px-2 sm:px-4 py-2.5 rounded ">
-          <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/" className="flex items-center cursor-pointer">
-              <span className="self-center text-lg md:text-2xl source-sans font-semibold text-[#1DB67D] cursor-pointer">
-                Cornelius OA
-              </span>
-            </Link>
-            <button
-              data-collapse-toggle="navbar-default"
-              type="button"
-              id="display-navigation"
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-default"
-              aria-expanded="false"
-              onClick={() => setNavbar(!navbar)}
-            >
-              <span className="sr-only">Open main menu</span>
-              {navbar ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
+      <header className="bg-black dark:bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
+        <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
+          <Link href="/" passHref>
+            <a className="flex items-center text-[#1DB67D] font-semibold text-2xl tracking-wide cursor-pointer select-none">
+              Cornelius OA
+            </a>
+          </Link>
 
-            <div
-              className={`w-full md:block md:w-auto ${
-                navbar ? "block" : "hidden"
-              }`}
-              id="display-navigation"
-            >
-              <ul
-                className={`leading-8 flex flex-col p-4 mt-4 text-center rounded-lg text-lg source-sans font-semibold md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ${
-                  darkMode ? "text-black" : "text-white"
-                } `}
+          {/* Hamburger / Close Button */}
+          <button
+            onClick={() => setNavbarOpen(!navbarOpen)}
+            className="md:hidden text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#1DB67D]"
+            aria-label="Toggle navigation menu"
+          >
+            {navbarOpen ? (
+              <FaTimes className="w-6 h-6" />
+            ) : (
+              <FaBars className="w-6 h-6" />
+            )}
+          </button>
+
+          {/* Navigation Links */}
+          <div
+            className={`w-full md:w-auto md:flex md:items-center ${
+              navbarOpen ? "block" : "hidden"
+            }`}
+          >
+            <ul className="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 text-lg font-semibold source-sans text-white dark:text-gray-300">
+              {navLinks.map(({ href, label }) => (
+                <li
+                  key={href}
+                  className="py-2 px-4 rounded hover:bg-gray-700 hover:text-[#1DB67D] transition-colors cursor-pointer"
+                  onClick={() => setNavbarOpen(false)} // close menu on link click
+                >
+                  <Link href={href}>
+                    <a>{label}</a>
+                  </Link>
+                </li>
+              ))}
+
+              {/* Dark Mode Toggle */}
+              {/* <li
+                onClick={toggleDarkMode}
+                className="flex items-center justify-center cursor-pointer px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+                title="Toggle dark mode"
               >
-                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <Link href="/blog">Blog + Newsletter</Link>
-                </li>
-                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <Link href="/portfolio">Portfolio</Link>
-                </li>
-                <li className="hover:bg-gray-300 hover:text-black dark:hover:bg-[#424242] py-0.5 px-2 rounded text-lg">
-                  <Link href="/contact">Contact</Link>
-                </li>
-                {/* <li onClick={() => setDarkMode(!darkMode)} className="flex text-lg dark:hover:bg-[#424242]"> <MdOutlineDarkMode className="text-center"/></li> */}
-              </ul>
-            </div>
+                {darkMode ? (
+                  <MdOutlineLightMode className="text-yellow-400 w-6 h-6" />
+                ) : (
+                  <MdOutlineDarkMode className="text-gray-300 w-6 h-6" />
+                )}
+              </li> */}
+            </ul>
           </div>
         </nav>
       </header>
-    </div>
+    </>
   );
 }
