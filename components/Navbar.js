@@ -30,7 +30,7 @@ export default function Navbar() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <header className="bg-black dark:bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
+      <header className="bg-black backdrop-blur-sm dark:bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
         <nav className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <Link href="/" passHref>
             <a className="flex items-center text-[#1DB67D] font-semibold text-base md:text-2xl tracking-wide cursor-pointer select-none">
@@ -61,7 +61,7 @@ export default function Navbar() {
               {navLinks.map(({ href, label }) => (
                 <li
                   key={href}
-                  className="py-2 px-4 rounded hover:bg-gray-700 hover:text-[#1DB67D] transition-colors cursor-pointer"
+                  className="py-2 px-4 rounded backdrop-blur-sm hover:bg-white/5 transition-colors cursor-pointer"
                   onClick={() => setNavbarOpen(false)} // close menu on link click
                 >
                   <Link href={href}>

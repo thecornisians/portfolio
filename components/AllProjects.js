@@ -342,7 +342,7 @@ export default function AllProjects() {
 
 function ProjectCard({ image, alt, description, github, tags, live, title }) {
   return (
-    <div className="group bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
+    <div className="group backdrop-blur-sm bg-white/5 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
       <div className="relative w-full h-44 overflow-hidden">
         <Image
           src={image}

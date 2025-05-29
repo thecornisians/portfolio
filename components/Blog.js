@@ -52,14 +52,14 @@ export default function BlogPosts() {
                 href={link}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center text-cyan-300 hover:text-white transition"
+                className="inline-flex items-center text-[#1DB67D] hover:text-white transition"
               >
                 Read More <BsFillArrowUpRightCircleFill className="ml-2" />
               </a>
             ) : (
               <a
                 href={link}
-                className="inline-flex items-center text-cyan-300 hover:text-white transition"
+                className="inline-flex items-center text-[#1DB67D] hover:text-white transition"
               >
                 Read More <BsFillArrowUpRightCircleFill className="ml-2" />
               </a>

@@ -21,7 +21,7 @@ const projects = [
     title: "Nana Asomani",
     image: Nanaasomani,
     alt: "Nana Asomani",
-    description: "Elegant personal site built with HTML, CSS, and JavaScript.",
+    description: "Portfolio site built with HTML, CSS, and JavaScript.",
     live: "https://nanaasomani.com/",
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     image: palmmoment,
     alt: "Palm Moments",
     description:
-      "Photography brand site built with Next.js, Framer Motion & Tailwind CSS.",
+      "Restaurant site built with Next.js, Framer Motion & Tailwind CSS.",
     github: "https://github.com/thecornisians/happy-notes",
     live: "https://www.palmmoment.com/",
   },
@@ -76,7 +76,7 @@ export default function Portfolio() {
 
 function ProjectCard({ image, alt, description, github, live, title }) {
   return (
-    <div className="group bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
+    <div className="group backdrop-blur-sm bg-white/5 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
       <div className="relative w-full h-44 overflow-hidden">
         <Image
           src={image}
