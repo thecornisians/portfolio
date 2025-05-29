@@ -2,73 +2,70 @@ import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import Link from "next/link";
 
 export default function BlogPosts() {
+  const posts = [
+    {
+      title: "Binary Search",
+      description:
+        "Binary search is a searching algorithm designed for sorted arrays. It efficiently narrows the search space by dividing the interval in half until the target is found.",
+      link: "/blog/binarysearch",
+      external: false,
+    },
+    {
+      title: "A Simple Introduction to the MVC Architecture",
+      description:
+        "MVC is a way of building software where you separate it into three logical components: Model, View, and Controller.",
+      link: "https://docs.google.com/presentation/d/1jdN7KdOwbqepRAbr9qS1e5Z8ggfd_FOqg__I1UHWJgQ/edit#slide=id.g1385ac14774_2_117",
+      external: true,
+    },
+    {
+      title: "The Fear of Starting Anything in Life",
+      description:
+        "Many people want to do great things but are held back by the fear that their work won't be good enough. This fear can paralyze action and progress.",
+      link: "https://cowans.substack.com/p/the-fear-of-starting-anything-in",
+      external: true,
+    },
+  ];
+
   return (
-    <section>
-      <div className="text-center mb-10 md:mt-10 ">
-        <h4 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
+    <section className="bg-black text-white py-16">
+      <div className="text-center mb-14">
+        <h4 className="font-bold text-3xl sm:text-4xl md:text-5xl text-white mb-4">
           Blog Posts
         </h4>
-        <p className="text-base text-body-color pb-3 px-4 source-sans">
+        <p className="text-base text-gray-400 max-w-xl mx-auto">
           Here are some of my most recent blog posts (Tech and Non-tech)
         </p>
       </div>
 
-      <div className="mt-5 px-5 pb-4">
-        <div className="mb-7 shadow-lg p-4 border border-gray-400 rounded-md">
-          <h1 className="font-bold text-2xl pb-3 source-sans">Binary Search</h1>
-          <p className="pb-3 text-base md:text-lg source-sans">
-            Binary search is a searching algorithm designed for sorted array or
-            list. Binary search efficiently narrows down the search space by
-            repeatedly dividing our search interval in half until we locate the
-            position of the element we are searching for.
-          </p>
-          <Link href="/blog/binarysearch" className="cursor-pointer">
-            <div className="hover:text-cyan-300 flex content-center cursor-pointer">
-              Read More
-              <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
-            </div>
-          </Link>
-        </div>
-
-        <div className="mb-7 shadow-lg p-4 border border-gray-400  rounded-md">
-          <h1 className="font-bold text-2xl pb-3 source-sans">
-            A simple introduction to the MVC Architechture
-          </h1>
-          <p className="pb-3 text-base md:text-lg source-sans">
-            The model-view controller is a way of implementing software design
-            by diving it into components.In other words, it is a way of building
-            software where you break down/separate the application into 3
-            logical components namely Model,View,Controller
-          </p>
-          <a
-            className="hover:text-cyan-300 flex content-center"
-            href="https://docs.google.com/presentation/d/1jdN7KdOwbqepRAbr9qS1e5Z8ggfd_FOqg__I1UHWJgQ/edit#slide=id.g1385ac14774_2_117"
-            target="_blank"
-            rel="noreferrer"
+      <div className="grid gap-8 px-6 md:px-20 lg:grid-cols-3">
+        {posts.map(({ title, description, link, external }, idx) => (
+          <div
+            key={idx}
+            className="backdrop-blur-sm bg-white/5 border border-gray-700 rounded-xl p-6 hover:shadow-2xl transition-all duration-300"
           >
-            Read More <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
-          </a>
-        </div>
-
-        <div className="mb-7 shadow-lg p-6 border border-gray-400 rounded-md">
-          <h1 className="font-bold text-2xl pb-3 source-sans">
-            The Fear of starting anything in life
-          </h1>
-          <p className="pb-3 text-base md:text-lg source-sans">
-            Most people have the desire to do great things in life however not
-            everyone acts on this desire. One reason for this is our fear of
-            making something lame. We are held back by the fear of our work not
-            being good enough
-          </p>
-          <a
-            className="hover:text-cyan-300 flex content-center"
-            href="https://cowans.substack.com/p/the-fear-of-starting-anything-in"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Read More <BsFillArrowUpRightCircleFill className="my-auto ml-1" />
-          </a>
-        </div>
+            <h2 className="font-semibold text-xl md:text-2xl mb-3">{title}</h2>
+            <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+              {description}
+            </p>
+            {external ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center text-cyan-300 hover:text-white transition"
+              >
+                Read More <BsFillArrowUpRightCircleFill className="ml-2" />
+              </a>
+            ) : (
+              <a
+                href={link}
+                className="inline-flex items-center text-cyan-300 hover:text-white transition"
+              >
+                Read More <BsFillArrowUpRightCircleFill className="ml-2" />
+              </a>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -39,7 +39,10 @@ const Projects = [
     tags: [
       "NextJS",
       "Framer Motion",
-      "Tailwind CSS, next-auth, mongodb, cloudinary",
+      "Tailwind CSS",
+      "Next-auth",
+      "Mongodb",
+      "Cloudinary",
     ],
     category: "client",
   },
@@ -267,9 +270,9 @@ export default function AllProjects() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const categories = ["all", ...new Set(Projects.map((p) => p.category))];
+  const categories = ["All", ...new Set(Projects.map((p) => p.category))];
 
-  const filtered = Projects.filter((p) => {
+  const filteredProjects = Projects.filter((p) => {
     const matchesCategory =
       selectedCategory === "all" || p.category === selectedCategory;
     const matchesSearch =
@@ -293,86 +296,83 @@ export default function AllProjects() {
             placeholder="Search projects..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10" // <-- Adds space for the icon
+            className="pl-10"
           />
         </div>
 
-        <Select onValueChange={(val) => setSelectedCategory(val)}>
-          <SelectTrigger className="w-[200px] bg-black text-white">
-            <SelectValue placeholder="Filter by category" />
-          </SelectTrigger>
-          <SelectContent className="bg-black text-white">
-            {categories.map((cat) => (
-              <SelectItem key={cat} value={cat}>
-                {cat.charAt(0).toUpperCase() + cat.slice(1)}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <div className="w-full md:w-auto text-white bg-black">
+          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <SelectTrigger className="w-full md:w-[200px]">
+              <SelectValue placeholder="Select category" />
+            </SelectTrigger>
+            <SelectContent className="bg-black text-white">
+              {categories.map((cat) => (
+                <SelectItem key={cat} value={cat}>
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((project) => (
-          <div
-            key={project.id}
-            className="group border rounded-2xl overflow-hidden bg-black text-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <div className="relative w-full h-[10rem]">
-              <Image
-                src={project.image}
-                alt={project.title}
-                layout="fill"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-
-            <div className="p-4 flex flex-col justify-between h-[250px]">
-              <div className="space-y-2">
-                <h3 className="text-lg font-semibold line-clamp-1">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-3 my-4">
+      {filteredProjects.length === 0 ? (
+        <p className="text-center text-muted-foreground mt-10">
+          No projects found.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-white p-2">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition "
+            >
+              <div className="relative w-full h-48 overflow-hidden mt-[-40px]">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={400}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
-                  {project.tags.map((tag, i) => (
-                    <Badge key={i} variant="outline">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, idx) => (
+                    <Badge key={idx} variant="outline">
                       {tag}
                     </Badge>
                   ))}
                 </div>
-              </div>
 
-              <div className="flex items-center justify-between mt-4">
-                <Link href={project.githubLink || "#"} target="_blank">
-                  <Button size="icon" variant="ghost">
-                    <Github size={18} />
-                  </Button>
-                </Link>
+                <div className="flex justify-between items-center">
+                  {project.githubLink && project.githubLink !== "#" && (
+                    <Link href={project.githubLink} target="_blank">
+                      <Button size="sm" variant="ghost">
+                        <Github size={16} className="mr-1" />
+                        Code
+                      </Button>
+                    </Link>
+                  )}
 
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    size="sm"
-                    className="rounded-full hover:text-gray-500"
-                  >
-                    Visit Site <ExternalLink size={14} className="ml-1" />
-                  </Button>
-                </a>
+                  {project.liveLink && (
+                    <a href={project.liveLink} target="_blank">
+                      <Button size="sm" variant="link">
+                        Live <ExternalLink size={16} className="ml-1" />
+                      </Button>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      {filtered.length === 0 && (
-        <p className="text-center mt-12 text-muted-foreground">
-          No projects match your filters.
-        </p>
+          ))}
+        </div>
       )}
     </section>
   );

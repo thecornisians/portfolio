@@ -5,7 +5,7 @@ import AllProjects from "../components/AllProjects";
 
 export default function portfolioPage() {
   return (
-    <section className="bg-gray-700">
+    <section className="">
       <Navbar />
       <AllProjects className="min-h-full" />
 

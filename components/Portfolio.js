@@ -13,7 +13,7 @@ const projects = [
     image: gaderin,
     alt: "Gaderin",
     description:
-      "Full stack application with authentication built with NextJS, express, MongoDB, Paystack API etc.",
+      "Full stack platform with auth, built using Next.js, Express, MongoDB, and Paystack API.",
     github: "#",
     live: "https://thegaderin.com/",
   },
@@ -21,8 +21,7 @@ const projects = [
     title: "Nana Asomani",
     image: Nanaasomani,
     alt: "Nana Asomani",
-    description:
-      "Portfolio website for client built with HTML, CSS, Javascript.",
+    description: "Elegant personal site built with HTML, CSS, and JavaScript.",
     live: "https://nanaasomani.com/",
   },
   {
@@ -30,7 +29,7 @@ const projects = [
     image: palmmoment,
     alt: "Palm Moments",
     description:
-      "Client website built with NextJS, Framer-motion and Tailwind CSS",
+      "Photography brand site built with Next.js, Framer Motion & Tailwind CSS.",
     github: "https://github.com/thecornisians/happy-notes",
     live: "https://www.palmmoment.com/",
   },
@@ -38,7 +37,7 @@ const projects = [
     title: "WB Group",
     image: wbgroup,
     alt: "WB Group",
-    description: "Client site built with React/NextJS and Tailwind CSS",
+    description: "Corporate website using React, Next.js, and Tailwind CSS.",
     github: "https://github.com/thecornisians/wb-group",
     live: "https://wbgrouprepresents.com",
   },
@@ -46,22 +45,27 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="scroll-smooth p-5">
-      <div className="text-center">
-        <h3 className="font-semibold text-lg text-primary mb-2">Portfolio</h3>
-        <h4 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
+    <section id="portfolio" className="scroll-smooth px-5 py-12 text-white">
+      <div className="text-center max-w-2xl mx-auto mb-12">
+        <h3 className="text-[#1DB67D] text-sm tracking-widest uppercase font-medium mb-2">
+          Portfolio
+        </h3>
+        <h4 className="text-3xl md:text-4xl font-extrabold mb-4">
           Recent Projects
         </h4>
-        <p className="text-base text-body-color source-sans">
-          Here are some of my most recent projects and freelance work. View all
-          projects
+        <p className="text-base text-zinc-400">
+          Explore some of my latest work across client and personal projects.
+          View all
           <Link href="/portfolio">
-            <span className="text-[#1DB67D] cursor-pointer"> Here</span>
+            <span className="text-[#1DB67D] ml-1 underline cursor-pointer">
+              here
+            </span>
           </Link>
+          .
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10 source-sans">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
@@ -72,8 +76,8 @@ export default function Portfolio() {
 
 function ProjectCard({ image, alt, description, github, live, title }) {
   return (
-    <div className="group border rounded-2xl overflow-hidden bg-black text-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow">
-      <div className="relative w-full h-[11rem]">
+    <div className="group bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-zinc-800">
+      <div className="relative w-full h-44 overflow-hidden">
         <Image
           src={image}
           alt={alt}
@@ -82,29 +86,33 @@ function ProjectCard({ image, alt, description, github, live, title }) {
         />
       </div>
 
-      <div className="p-4 flex flex-col justify-between h-[200px]">
+      <div className="p-5 flex flex-col justify-between h-[220px]">
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
-          <p className="text-sm text-muted-foreground line-clamp-3 my-4">
-            {description}
-          </p>
+          <h3 className="text-lg font-semibold">{title}</h3>
+          <p className="text-sm text-zinc-400 line-clamp-3">{description}</p>
         </div>
 
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between pt-4">
           {github ? (
             <a href={github} target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-[#1DB67D]"
+              >
                 <Github size={18} />
               </Button>
             </a>
           ) : (
             <span />
           )}
-
           {live && (
             <a href={live} target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="rounded-full hover:text-gray-500">
-                Visit Site <ExternalLink size={14} className="ml-1" />
+              <Button
+                size="sm"
+                className="rounded-full text-white border border-white hover:border-[#1DB67D] hover:text-[#1DB67D] transition-colors"
+              >
+                Visit Site <ExternalLink size={14} className="ml-2" />
               </Button>
             </a>
           )}
