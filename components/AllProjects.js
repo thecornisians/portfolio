@@ -353,7 +353,11 @@ export default function AllProjects() {
 
                 <div className="flex justify-between items-center">
                   {project.githubLink && project.githubLink !== "#" && (
-                    <Link href={project.githubLink} target="_blank">
+                    <Link
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <Button size="sm" variant="ghost">
                         <Github size={16} className="mr-1" />
                         Code
@@ -362,7 +366,7 @@ export default function AllProjects() {
                   )}
 
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank">
+                    <a href={project.liveLink} target="_blank" rel="noreferrer">
                       <Button size="sm" variant="link">
                         Live <ExternalLink size={16} className="ml-1" />
                       </Button>
