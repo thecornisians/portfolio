@@ -348,7 +348,7 @@ function ProjectCard({ image, alt, description, github, tags, live, title }) {
           src={image}
           alt={alt}
           layout="fill"
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover md:group-hover:scale-105 transition-transform duration-300"
         />
       </div>
 
