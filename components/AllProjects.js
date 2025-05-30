@@ -33,7 +33,7 @@ const Projects = [
     image: "/gaderinn.png",
     title: "Gaderin",
     description:
-      "Fullstack project - NextJS, TailwindCSS, MongoDB, Cloudinary, NextAuth, Paystack api, and more.",
+      "Fullstack project - marketplace where you can find and book activities.",
     githubLink: "#",
     liveLink: "https://www.thegaderin.com/",
     tags: [
