@@ -44,7 +44,7 @@ const Projects = [
       "Mongodb",
       "Cloudinary",
     ],
-    category: "client",
+    category: "fullstack",
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const Projects = [
     githubLink: "https://christiansaint.co",
     liveLink: "https://christiansaint.co",
     tags: ["NextJS", "Framer Motion", "Tailwind CSS"],
-    category: "client",
+    category: "portfolio",
   },
   {
     id: 5,
