@@ -53,7 +53,7 @@ const Projects = [
     description:
       "Client website built with NextJS, Framer-motion and Tailwind CSS.",
     githubLink: "#",
-    liveLink: "https://www.palmmoment.com/",
+    liveLink: "https://palmmoment.netlify.app/",
     tags: ["NextJS", "Framer Motion", "Tailwind CSS"],
     category: "client",
   },

@@ -1,46 +1,41 @@
-import { FaLinkedin } from "react-icons/fa";
-import Image from "next/image";
-import { FaTwitterSquare } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="p-4 shadow md:items-center md:justify-between md:p-6 dark:bg-gray-800 md:flex lg:flex bg-black text-white">
-      <span className="text-md text-gray-500 sm:text-center dark:text-gray-400">
-        © {new Date().getFullYear()} Cornelius Owusu-Ansah.
-      </span>
-      <ul className="flex flex-wrap items-center gap-2 mt-8 text-md text-gray-500 dark:text-gray-400 ">
-        <li>
+    <footer className="bg-black text-white py-12 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <span className="text-sm text-gray-500">
+          © {new Date().getFullYear()} Cornelius Owusu-Ansah. All rights
+          reserved.
+        </span>
+
+        <div className="flex gap-6 text-2xl text-gray-500">
           <a
             href="https://www.linkedin.com/in/corneliusoa/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-slate-600 mr-4 hover:underline md:mr-6 text-xl"
+            className="hover:text-white transition-colors"
           >
             <FaLinkedin />
           </a>
-        </li>
-        <li>
           <a
             href="https://twitter.com/thecornisians"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-slate-600 mr-4 hover:underline md:mr-6 text-xl"
+            className="hover:text-white transition-colors"
           >
             <FaTwitterSquare />
           </a>
-        </li>
-        <li>
           <a
             href="https://github.com/thecornisians"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-slate-600  mr-4 hover:underline md:mr-6 text-xl"
+            className="hover:text-white transition-colors"
           >
             <FaGithubSquare />
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </footer>
   );
 }

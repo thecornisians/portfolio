@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap");
 
 @tailwind base;
@@ -10,23 +9,16 @@
   html {
     @apply scroll-smooth;
   }
+
+  body {
+    @apply font-sans antialiased text-white bg-black;
+  }
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body,
-html {
-  font-family: "Inter", sans-serif;
-  background-color: black;
-}
-
-p {
-  font-family: sans-serif;
-  font-weight: 500;
 }
 
 .source-sans {

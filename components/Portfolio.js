@@ -30,8 +30,8 @@ const projects = [
     alt: "Palm Moments",
     description:
       "Restaurant site built with Next.js, Framer Motion & Tailwind CSS.",
-    github: "https://github.com/thecornisians/happy-notes",
-    live: "https://www.palmmoment.com/",
+    github: "#",
+    live: "https://palmmoment.netlify.app/",
   },
   {
     title: "WB Group",
