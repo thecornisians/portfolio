@@ -1,34 +1,88 @@
+import SEO from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { getAlllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
-import Head from "next/head";
 import Link from "next/link";
+import { ArrowLeft, Clock } from "lucide-react";
 
 export default function Post({ postData }) {
   return (
-    <div className="text-white">
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
+    <div className="bg-black min-h-screen text-zinc-100 selection:bg-emerald-400 selection:text-black">
+      <SEO
+        title={postData.title}
+        description={postData.shortDescription}
+        canonical={`/blog/${postData.id}`}
+        ogType="article"
+        publishedTime={postData.date}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: postData.title,
+          description: postData.shortDescription,
+          datePublished: postData.date,
+          author: {
+            "@type": "Person",
+            name: "Cornelius Owusu-Ansah",
+            url: "https://thecornisians.com",
+          },
+          publisher: {
+            "@type": "Person",
+            name: "Cornelius Owusu-Ansah",
+          },
+        }}
+      />
       <Navbar />
-      <section className="px-6 md:px-[5rem] mx-auto">
-        <h4 className="text-4xl my-2 source-sans font-extrabold text-center lg:text-center">
-          {postData.title} <br />
-        </h4>
-        <span className="flex justify-center mb-12">
-          <Date dateString={postData.date} />
-        </span>
 
+      <main className="pt-24 sm:pt-28 pb-16 max-w-3xl mx-auto px-4 sm:px-6">
+        {/* Back Link */}
+        <Link href="/blog">
+          <a className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-white transition-colors mb-8 group">
+            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
+            <span>Back to all posts</span>
+          </a>
+        </Link>
+
+        {/* Article Header */}
+        <header className="mb-10 pb-8 border-b border-white/[0.08]">
+          <div className="flex items-center gap-3 text-xs font-mono text-emerald-400 mb-3">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <Date dateString={postData.date} />
+            </span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
+            {postData.title}
+          </h1>
+        </header>
+
+        {/* Article Body */}
         <div
-          className="md:text-lg source-sans "
+          className="article-content font-sans"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
-      </section>
-      <p className="text-center source-sans mt-6 uppercase hover:text-gray-700">
-        {" "}
-        <Link href="/blog">Back to blog posts</Link>
-      </p>
+
+        {/* Bottom Navigation */}
+        <div className="mt-14 pt-8 border-t border-white/[0.08] flex items-center justify-between">
+          <Link href="/blog">
+            <a className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
+              <ArrowLeft size={14} />
+              <span>Back to blog archive</span>
+            </a>
+          </Link>
+
+          <a
+            href="https://cowans.substack.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-mono text-emerald-400 hover:underline"
+          >
+            Read more on Substack ↗
+          </a>
+        </div>
+      </main>
+
       <Footer />
     </div>
   );

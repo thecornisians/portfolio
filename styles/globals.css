@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,21 +7,60 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    color-scheme: dark;
   }
 
   body {
-    @apply font-sans antialiased text-white bg-black;
+    @apply font-sans antialiased text-zinc-100 bg-[#000000];
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: #00f090;
+    color: #000000;
   }
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+}
+
+/* Vercel-style crisp grid pattern */
+.bg-vercel-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-vercel-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism and glows */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(20, 20, 20, 0.8);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+/* Subtle glowing radial spotlight */
+.glow-spotlight {
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(0, 240, 144, 0.08), transparent 40%);
 }
 
 .source-sans {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Geist", "Inter", sans-serif;
 }
 
 .image {
@@ -30,9 +68,72 @@
   width: 100%;
 }
 
+/* Markdown article styles */
+.article-content {
+  color: #d4d4d8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+
+.article-content code {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.85rem;
+  color: #00f090;
+}
+
+.article-content pre {
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.article-content pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e4e4e7;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 640px) {
   code {
-    font-size: 0.7rem;
-    padding-inline: 10px;
+    font-size: 0.75rem;
+    padding-inline: 8px;
   }
 }

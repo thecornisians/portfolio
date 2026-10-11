@@ -1,42 +1,29 @@
-import { useState } from "react";
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Portfolio from "../components/Portfolio";
-import Logos from "../components/Logos";
-import Footer from "../components/Footer";
 import About from "../components/About";
+import Portfolio from "../components/Portfolio";
 import BlogPosts from "../components/Blog";
-import { IoMdMail } from "react-icons/io";
+import Form from "../components/Form";
+import Footer from "../components/Footer";
 
-export default function Home({ portfolioImage }) {
-  const [darkMode, setDarkMode] = useState(false);
-
+export default function Home() {
   return (
-    <section className="bg-black text-white">
+    <div className="bg-[#050505] text-[#F5F5F5] min-h-screen selection:bg-emerald-400 selection:text-black">
+      <SEO
+        title="Cornelius Owusu-Ansah — Software Engineer & Founder"
+        description="Cornelius Owusu-Ansah is a Ghanaian software engineer, product builder, and co-founder of Gaderin based in Accra. Building scalable digital products, web systems, and consumer tech."
+        canonical="/"
+      />
       <Navbar />
-      <Hero />
-      <About />
-      <Portfolio />
-      {/* <Logos /> */}
-      <BlogPosts />
-      <section>
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white">
-            Contact
-          </h2>
-          <p className="mb-4 md:mb-7 font-light text-center text-white dark:text-gray-400 sm:text-xl source-sans">
-            Want to talk about a new project you have or have a question ? Send
-            me an email and I will get back to you as soon as possible.
-          </p>
-          <div className="flex justify-center items-center text-lg md:text-xl source-sans">
-            <IoMdMail />{" "}
-            <a className="text-white" href="mailto:thecornisians@gmail.com">
-              : thecornisians[at]gmail.com
-            </a>
-          </div>
-        </div>
-      </section>
+      <main>
+        <Hero />
+        <About />
+        <Portfolio />
+        <BlogPosts />
+        <Form />
+      </main>
       <Footer />
-    </section>
+    </div>
   );
 }

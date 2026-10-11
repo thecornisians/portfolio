@@ -1,16 +1,21 @@
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import Form from "../components/Form";
-import Link from "next/link";
 import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
-    <main className=" bg-black scroll-smooth">
-      <section className="min-h-screen">
-        <Navbar />
+    <div className="bg-black min-h-screen text-zinc-100 selection:bg-emerald-400 selection:text-black">
+      <SEO
+        title="Contact"
+        description="Get in touch with Cornelius Owusu-Ansah for software engineering opportunities, product leadership, and collaboration."
+        canonical="/contact"
+      />
+      <Navbar />
+      <main className="pt-24 sm:pt-28 pb-16">
         <Form />
-      </section>
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
