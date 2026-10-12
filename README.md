@@ -21,7 +21,21 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Contact form spam check
+
+The contact form asks visitors to copy six characters from a noisy PNG image.
+The answer is never returned as page text, SVG text, or plaintext API data.
+The API verifies
+the signed answer, rejects submissions made within two seconds or after ten
+minutes, and checks a hidden honeypot field. Visitors can request a new code
+without losing their message. This deters basic bots; bots that use OCR
+can still submit, and tokens are reusable until they expire.
+
+Set `CONTACT_CHALLENGE_SECRET` to a long random secret on the server if desired.
+Otherwise, verification uses the existing `RESEND_KEYS` or `RESEND_API_KEY`, so
+no extra configuration is required for an already configured deployment.
+
+## Next.js resources
 
 To learn more about Next.js, take a look at the following resources:
 

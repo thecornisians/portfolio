@@ -1,9 +1,21 @@
+import { challengeSecret, verifyChallenge } from "../../lib/contactChallenge";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message, website, challengeToken, challengeAnswer } = req.body || {};
+
+  const secret = challengeSecret();
+  if (!secret) {
+    return res.status(503).json({ error: "Verification is unavailable. Please reach out by email." });
+  }
+  if (website || !verifyChallenge(challengeToken, challengeAnswer, secret)) {
+    return res.status(400).json({
+      error: "Please enter the code from the verification image. If it has expired, try a new code.",
+    });
+  }
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Please fill in all required fields." });

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail, Copy, Check, Send, ArrowUpRight, MessageSquare, AlertCircle, Loader2 } from "lucide-react";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { copyObfuscatedEmail, getObfuscatedEmail } from "../lib/email";
@@ -9,6 +9,28 @@ export default function Form() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle, sending, success, error
   const [errorMessage, setErrorMessage] = useState("");
+  const [challenge, setChallenge] = useState(null);
+  const [challengeAnswer, setChallengeAnswer] = useState("");
+  const [challengeError, setChallengeError] = useState("");
+  const [website, setWebsite] = useState("");
+
+  const loadChallenge = async () => {
+    setChallenge(null);
+    setChallengeAnswer("");
+    setChallengeError("");
+    try {
+      const res = await fetch("/api/contact-challenge", { cache: "no-store" });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Could not load verification. Please try again.");
+      setChallenge(data);
+    } catch (err) {
+      setChallengeError(err.message || "Could not load verification. Please try again.");
+    }
+  };
+
+  useEffect(() => {
+    loadChallenge();
+  }, []);
 
   const handleCopy = async () => {
     await copyObfuscatedEmail();
@@ -26,7 +48,7 @@ export default function Form() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, website, challengeToken: challenge?.token, challengeAnswer }),
       });
 
       const data = await res.json();
@@ -162,7 +184,7 @@ export default function Form() {
                 Thanks for reaching out! Your message has been sent. I&apos;ll get back to you soon.
               </p>
               <button
-                onClick={() => setStatus("idle")}
+                onClick={() => { setStatus("idle"); loadChallenge(); }}
                 className="text-xs font-mono text-emerald-400 hover:text-white underline cursor-pointer"
               >
                 Send another message →
@@ -239,9 +261,45 @@ export default function Form() {
                 />
               </div>
 
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="form-website">Website</label>
+                <input id="form-website" name="website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+              </div>
+
+              <div className="rounded-xl border border-[#252525] p-4">
+                <label htmlFor="form-verification" className="block text-xs font-mono text-[#A3A3A3] mb-2">
+                  Quick spam check: enter the six characters in the image
+                </label>
+                {challenge ? (
+                  <>
+                  {/* Raster challenge deliberately has no text equivalent of the answer. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={challenge.image} width={280} height={85} alt="Spam verification code" className="mb-3 max-w-full rounded-lg" />
+                  <input
+                    id="form-verification"
+                    type="text"
+                    pattern="[A-Ha-hJ-Nj-nP-Zp-z2-9]{6}"
+                    maxLength={6}
+                    autoComplete="off"
+                    required
+                    placeholder="Six-character code"
+                    value={challengeAnswer}
+                    onChange={(e) => setChallengeAnswer(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl bg-black/70 border border-[#252525] text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400"
+                  />
+                  <p className="mt-2 text-xs text-zinc-400">Uppercase or lowercase is fine. Can&apos;t read the image? Try a new code or use the email link.</p>
+                  </>
+                ) : (
+                  <p role="status" className="text-xs text-zinc-400">{challengeError || "Loading question…"}</p>
+                )}
+                <button type="button" onClick={loadChallenge} disabled={status === "sending"} className="mt-2 text-xs text-emerald-400 underline disabled:opacity-50">
+                  {challengeError ? "Retry verification" : "Try a new code"}
+                </button>
+              </div>
+
               <button
                 type="submit"
-                disabled={status === "sending"}
+                disabled={status === "sending" || !challenge || !challengeAnswer.trim()}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#F5F5F5] text-black font-semibold text-sm hover:bg-zinc-200 transition-all cursor-pointer disabled:opacity-50"
               >
                 {status === "sending" ? (
